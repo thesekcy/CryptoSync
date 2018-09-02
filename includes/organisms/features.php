@@ -25,7 +25,6 @@
 				</div>	
 			</div>
 		</div>
-	</div>
 
 		<div class="container col-6 content">
 			<div class="row">

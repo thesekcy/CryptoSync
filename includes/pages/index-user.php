@@ -16,11 +16,12 @@
   <title>Nome do Projeto</title>
 </head>
 <body>
->
+
   <?php include_once('../organisms/header-user.php'); ?>
   <?php include_once('../molecules/jumbotron-1_qualidades.php'); ?>
   <?php include_once('../organisms/features.php'); ?>
-  <?php include_once('../organisms/carousel_comment.php'); ?>
+  <?php //include_once('../organisms/carousel_comment.php'); ?>
+  <?php include_once('../organisms/partners.php'); ?>
 
 
   <!-- Optional JavaScript -->
