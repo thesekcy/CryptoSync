@@ -1,6 +1,6 @@
 <div class="container col-12 features">
 	<div class="global">
-		<div class="text-center">
+		<div class="text-center text_title">
 			<strong class="title">Features</strong>
 			<p class="subtitle">O Sync fornece alguns recursos excelentes e práticos.<br>
 			Estas são algumas características que devem ser notadas.</p>
