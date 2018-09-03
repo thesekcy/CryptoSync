@@ -10,7 +10,7 @@
       <a class="navbar-brand" href="#">
         <!-- Logo -->
         <img src="../../img/blockchain.png" width="30" height="30" class="d-inline-block align-top" alt="">
-        <b class="txtLogo">SYNC</b>
+        <b class="txtLogo">CryptoSYNC</b>
       </a>
 
       <!-- NavBar alinhada a direita ml-auto ml > Left | mr > right (procurando o centro)-->

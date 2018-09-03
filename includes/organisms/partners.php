@@ -5,7 +5,7 @@
 				<strong class="titulo">Conheça alguns de nossos principais parceiros.</strong>
 
 				<p>Agradecemos a todos os parceiros pelo apoio<br>
-					para que fosse possivel dar andamento neste projet<br>
+					para que fosse possivel dar andamento neste projeto<br>
 				tão importante para a nossa equipe.</p>	
 				<button type="button" class="btn btn-outline-light">Veja todos os parceiros &nbsp;&nbsp; <i class="fas fa-angle-right"></i></button>
 			</div>

@@ -60,7 +60,7 @@
 							<input class="email_newslatter" type="text" placeholder="Email">
 						</form>
 						<br><br>	
-						<p class="text-right copy">Copyright @ 2018 Nome do Projeto.<br>
+						<p class="text-right copy">Copyright @ 2018 CryptoSYNC.<br>
 						Todos os direitos reservados.</p>
 
 					</div>

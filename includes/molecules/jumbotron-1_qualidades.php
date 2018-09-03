@@ -1,7 +1,7 @@
 <div class="containerTextJabaa text-center"> 
 	<div class="col-12 JabaaTitle">
 		<p>
-			Nome do Projeto é uma plataforma web que leva<br> 
+			CryptoSYNC é uma plataforma web que leva<br> 
 			<strong>segurança</strong> com <strong>confiabilidade</strong>, <strong>feedback</strong> e <strong>suporte</strong>
 		</p>
 	</div>
