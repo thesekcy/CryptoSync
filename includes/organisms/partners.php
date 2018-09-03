@@ -1,5 +1,5 @@
 <div class="container col-12 partners">
-	<div class="container col-6 global">
+	<div class="container col-10 global">
 		<div class="row">
 			<div role="main" class="col-md-6 title-partners">
 				<strong class="titulo">Conheça alguns de nossos principais parceiros.</strong>

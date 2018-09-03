@@ -1,5 +1,5 @@
 <div class="container col-12 footer">
-	<div class="container col-6 global">
+	<div class="container col-10 global">
 		<div class="row">
 			<div role="main" class="col-md-4">
 				<img src="../../img/logo.png" alt="">

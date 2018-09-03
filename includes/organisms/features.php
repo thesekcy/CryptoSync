@@ -6,7 +6,7 @@
 			Estas são algumas características que devem ser notadas.</p>
 		</div>
 
-		<div class="container col-6 content">
+		<div class="container col-10 content">
 			<div class="row">
 				<div class="col-5" class="contentfeatures">
 					<strong class="title">Autenticação de contratos online</strong>
@@ -16,7 +16,7 @@
 			</div>
 		</div>
 
-		<div class="container col-6 content">
+		<div class="container col-10 content">
 			<div class="row">
 				<div class="col-7"><img class="img-fluid" src="../../img/t1.png" alt=""></div>
 				<div class="col-5" class="contentfeatures">
@@ -26,7 +26,7 @@
 			</div>
 		</div>
 
-		<div class="container col-6 content">
+		<div class="container col-10 content">
 			<div class="row">
 				<div class="col-5" class="contentfeatures">
 					<strong class="title">Autenticação de contratos online</strong>
