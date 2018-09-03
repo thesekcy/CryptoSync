@@ -5,7 +5,7 @@
 			<strong>segurança</strong> com <strong>confiabilidade</strong>, <strong>feedback</strong> e <strong>suporte</strong>
 		</p>
 	</div>
-	<div class="row text-center jabaaThree" align="center">
+	<div class="text-center jabaaThree" align="center">
 
 		<div class="col-sm-2 line">
 			<img src="../../img/rocket.svg" alt="Agilidade" width="100px"><br>
