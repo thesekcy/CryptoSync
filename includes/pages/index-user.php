@@ -8,10 +8,12 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="../../node_modules/bootstrap/compiler/bootstrap.css">
   <link rel="stylesheet" href="../../node_modules/bootstrap/compiler/style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <!-- Icon Awesome-->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 
+ 
   <!-- Titulo -->
   <title>Nome do Projeto</title>
 </head>
@@ -30,5 +32,9 @@
   <script src="../../node_modules/jquery/dist/jquery.js"></script>
   <script src="../../node_modules/popper.js/dist/umd/popper.js"></script>
   <script src="../../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script>
+	AOS.init();
+  </script>
 </body>
 </html>
