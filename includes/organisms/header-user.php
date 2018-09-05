@@ -2,22 +2,45 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 
 <div class="bgHeader col-12">
-  <div class="container col-10">
+  <div class="container col-8">
 
 
     <!-- Primeira NavBar -->
     <nav class="navbar navbar-expand-lg navHeaderTop">
       <a class="navbar-brand" href="#">
         <!-- Logo -->
-        <img src="../../img/blockchain.png" width="30" height="30" class="d-inline-block align-top" alt="">
-        <b class="txtLogo">CryptoSYNC</b>
+        <img src="../../img/logo.png" width="120px" class="img-fluid" alt="">
       </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse navbarSite">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="">INICIO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">COMO FUNCIONA</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">CLIENTES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">PREÇOS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">SUPORTE</a>
+          </li>
+        </ul>
+      </div>
 
       <!-- NavBar alinhada a direita ml-auto ml > Left | mr > right (procurando o centro)-->
       <ul class="navbar-nav ml-auto">
         <li class="nav-item dropdown">
           <!-- Botão de Login com Dropdown -->
-          <a class="nav-link btn btn-outline-primary btnLogin" data-toggle="dropdown" id="navDrop" href="">Login</a>
+          <a class="nav-link btn btn-outline-primary btnLogin" data-toggle="dropdown" id="navDrop" href="">Login <i class="fas fa-caret-down"></i></a>
 
           <!-- Dropdown formulario de login -->
           <div class="dropdown-menu">
@@ -51,39 +74,13 @@
 
     <!-- NavBar Menu com toggler expand -->
     <!-- Em telas menores os itens da lista ficam dentro de um botão -->
-    <nav class="navbar navbar-expand-lg navbar-dark navMenu">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse navbarSite">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="">INICIO</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="">PRODUTOS</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="">PREÇOS</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="">CLIENTES</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="">SUPORTE</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="">SORBE NÓS</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-    <!--texto e imagens -->
-    <?php include_once('../molecules/header-imgs-user.php'); ?>
     
 
-</div>
+    <!--texto e imagens -->
+    <?php //include_once('../molecules/headers/sub_header_principal.php');
+          include_once('../molecules/headers/sub_header_features.php'); ?>
+    
+
+  </div>
 </div>
 

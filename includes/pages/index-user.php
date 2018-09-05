@@ -13,18 +13,23 @@
   <!-- Icon Awesome-->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 
- 
   <!-- Titulo -->
   <title>Nome do Projeto</title>
 </head>
 <body>
 
-  <?php include_once('../organisms/header-user.php'); ?>
-  <?php include_once('../molecules/jumbotron-1_qualidades.php'); ?>
-  <?php include_once('../organisms/features.php'); ?>
+  <?php
+  // Pagina Inicial
+  // include_once('../organisms/header-user.php');
+  // include_once('../molecules/jumbotron-1_qualidades.php');
+  // include_once('../organisms/features_index.php');
+  // include_once('../organisms/partners.php');
+  // include_once('../organisms/footer.php');
   
-  <?php include_once('../organisms/partners.php'); ?>
-  <?php include_once('../organisms/footer.php'); ?>
+  //Features
+   include_once('../organisms/header-user.php'); 
+   include_once('../organisms/footer.php');
+  ?>
 
 
   <!-- Optional JavaScript -->
@@ -33,8 +38,6 @@
   <script src="../../node_modules/popper.js/dist/umd/popper.js"></script>
   <script src="../../node_modules/bootstrap/dist/js/bootstrap.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-   <script>
-	AOS.init();
-  </script>
+   <script> AOS.init();</script>
 </body>
 </html>
