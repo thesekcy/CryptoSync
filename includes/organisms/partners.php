@@ -1,7 +1,7 @@
 <div class="container col-12 partners">
 	<div class="container col-10 global">
 		<div class="row">
-			<div role="main" class="col-md-6 title-partners">
+			<div data-aos="fade-right" role="main" class="col-md-6 title-partners">
 				<strong class="titulo">Conheça alguns de nossos principais parceiros.</strong>
 
 				<p>Agradecemos a todos os parceiros pelo apoio<br>
@@ -13,9 +13,9 @@
 			<div role="complementary" class="col-md-2 coluna-img">
 				<div>
 					<div class="coluna_1 ">
-						<img src="../../img/imagems.png" class="img-fluid img-partners"><br><br>
-						<img src="../../img/imagems.png" class="img-fluid img-partners"><br><br>
-						<img src="../../img/imagems.png" class="img-fluid img-partners">
+						<img data-aos="zoom-in" src="../../img/imagems.png" class="img-fluid img-partners"><br><br>
+						<img data-aos="zoom-in" src="../../img/imagems.png" class="img-fluid img-partners"><br><br>
+						<img data-aos="zoom-in" src="../../img/imagems.png" class="img-fluid img-partners">
 					</div>
 				</div>
 			</div>
@@ -23,9 +23,9 @@
 			<div role="complementary" class="col-md-2 coluna-img">
 				<div>
 					<div class="coluna_2">
-						<img src="../../img/imagems.png" class="img-fluid img-partners"><br><br>
-						<img src="../../img/imagems.png" class="img-fluid img-partners"><br><br>
-						<img src="../../img/imagems.png" class="img-fluid img-partners">
+						<img data-aos="zoom-in" src="../../img/imagems.png" class="img-fluid img-partners"><br><br>
+						<img data-aos="zoom-in" src="../../img/imagems.png" class="img-fluid img-partners"><br><br>
+						<img data-aos="zoom-in" src="../../img/imagems.png" class="img-fluid img-partners">
 					</div>
 				</div>
 			</div>
@@ -33,9 +33,9 @@
 			<div role="complementary" class="col-md-2 coluna-img">
 				<div>
 					<div class="coluna_3">
-						<img src="../../img/imagems.png" class="img-fluid img-partners"><br><br>
-						<img src="../../img/imagems.png" class="img-fluid img-partners"><br><br>
-						<img src="../../img/imagems.png" class="img-fluid img-partners">
+						<img data-aos="zoom-in" src="../../img/imagems.png" class="img-fluid img-partners"><br><br>
+						<img data-aos="zoom-in" src="../../img/imagems.png" class="img-fluid img-partners"><br><br>
+						<img data-aos="zoom-in" src="../../img/imagems.png" class="img-fluid img-partners">
 					</div>
 				</div>
 			</div>

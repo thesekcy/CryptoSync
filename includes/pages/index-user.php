@@ -27,7 +27,8 @@
   // include_once('../organisms/footer.php');
   
   //Features
-   include_once('../organisms/header-user.php'); 
+  include_once('../organisms/header-user.php'); 
+  include_once('../organisms/features_page.php'); 
    include_once('../organisms/footer.php');
   ?>
 

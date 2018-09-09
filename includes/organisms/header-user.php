@@ -77,8 +77,8 @@
     
 
     <!--texto e imagens -->
-    <?php //include_once('../molecules/headers/sub_header_principal.php');
-          include_once('../molecules/headers/sub_header_features.php'); ?>
+    <?php include_once('../molecules/headers/sub_header_principal.php');
+          //include_once('../molecules/headers/sub_header_features.php'); ?>
     
 
   </div>
