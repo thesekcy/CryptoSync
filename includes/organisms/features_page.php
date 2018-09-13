@@ -6,17 +6,17 @@
 		<div class="container col-10">
 			<div class="row">
 				<div class="col-4 col-md ">
-					<img src="../../img/imagems.png" class="img-fluid" alt="" width="300px"><br>
+					<img src="<?=HOME_URL?>/img/imagems.png" class="img-fluid" alt="" width="300px"><br>
 					<strong>Titulo</strong>
 					<p class="textFeature">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus scelerisque libero at lacus pretium..</p>
 				</div>
 				<div class="col-4 col-md">
-					<img src="../../img/imagems.png" class="img-fluid" alt="" width="300px"><br>
+					<img src="<?=HOME_URL?>/img/imagems.png" class="img-fluid" alt="" width="300px"><br>
 					<strong>Titulo</strong>
 					<p class="textFeature">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 				</div>
 				<div class="col-4 col-md">
-					<img src="../../img/imagems.png" class="img-fluid" alt="" width="300px"><br>
+					<img src="<?=HOME_URL?>/img/imagems.png" class="img-fluid" alt="" width="300px"><br>
 					<strong>Titulo</strong>
 					<p class="textFeature">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus scelerisque libero at lacus pretium, eget efficitur ante pulvinar.</p>
 				</div>
@@ -26,7 +26,7 @@
 			</div>
 		</div>
 
-		<img src="../../img/video.png" class="img-fluid" alt="" width="1280px">
+		<img src="<?=HOME_URL?>/img/video.png" class="img-fluid" alt="" width="1280px">
 
 		<div class="titulo_features">
 			<strong>Titulo</strong>	
@@ -35,19 +35,19 @@
 		<div class="container col-10">
 			<div class="row">
 				<div class="col-4 col-md ">
-					<img src="../../img/imagems.png" class="img-fluid" alt="" width="300px"><br>
+					<img src="<?=HOME_URL?>/img/imagems.png" class="img-fluid" alt="" width="300px"><br>
 					<strong>Titulo</strong>
 					<p class="textFeature">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus scelerisque libero at lacus pretium..</p>
 					<a href="">link</a>
 				</div>
 				<div class="col-4 col-md">
-					<img src="../../img/imagems.png" class="img-fluid" alt="" width="300px"><br>
+					<img src="<?=HOME_URL?>/img/imagems.png" class="img-fluid" alt="" width="300px"><br>
 					<strong>Titulo</strong>
 					<p class="textFeature">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 					<a href="">link</a>
 				</div>
 				<div class="col-4 col-md">
-					<img src="../../img/imagems.png" class="img-fluid" alt="" width="300px"><br>
+					<img src="<?=HOME_URL?>/img/imagems.png" class="img-fluid" alt="" width="300px"><br>
 					<strong>Titulo</strong>
 					<p class="textFeature">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus scelerisque libero at lacus pretium, eget efficitur ante pulvinar.</p>
 					<a href="">link</a>

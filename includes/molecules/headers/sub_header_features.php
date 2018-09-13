@@ -2,7 +2,7 @@
     <div class="container TextHeader">
       <div class="row">
         <div class="col-sm">
-          <img class="img-blockchain-header d-none d-md-block d-lg-nonek" src="../../img/headerImg.png" width="550">
+          <img class="img-blockchain-header d-none d-md-block d-lg-nonek" src="<?=HOME_URL?>/img/headerImg.png" width="550">
         </div>
         <div class="col-sm title-desc-header">
           <p class="sibtutilo">PLATAFORMA DE<br>

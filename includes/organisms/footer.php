@@ -2,7 +2,7 @@
 	<div class="container col-10 global">
 		<div class="row">
 			<div role="main" class="col-md-4">
-				<img src="../../img/logo.png" alt="">
+				<img src="<?=HOME_URL?>/img/logo.png" alt="">
 
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 				<br><br>	

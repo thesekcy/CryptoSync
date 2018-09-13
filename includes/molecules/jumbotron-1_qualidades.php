@@ -8,15 +8,15 @@
 	<div class="text-center jabaaThree" align="center">
 
 		<div class="col-sm-2 line">
-			<img src="../../img/rocket.svg" alt="Agilidade" width="100px"><br>
+			<img src="<?=HOME_URL?>/img/rocket.svg" alt="Agilidade" width="100px"><br>
 			<strong class="strong_jabaaThree">Agilidade</strong>
 		</div>
 		<div class="col-sm-2 line">
-			<img src="../../img/price.svg" alt="Custo Beneficio" width="100px"><br>
+			<img src="<?=HOME_URL?>/img/price.svg" alt="Custo Beneficio" width="100px"><br>
 			<strong class="strong_jabaaThree">Custo Beneficio</strong>
 		</div>
 		<div class="col-sm-2">
-			<img src="../../img/forest.svg" alt="Ecologico" width="100px"><br>
+			<img src="<?=HOME_URL?>/img/forest.svg" alt="Ecologico" width="100px"><br>
 			<strong class="strong_jabaaThree">Ecológico</strong>
 		</div>
 

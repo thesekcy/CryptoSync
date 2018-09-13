@@ -9,7 +9,7 @@
     <nav class="navbar navbar-expand-lg navHeaderTop">
       <a class="navbar-brand" href="#">
         <!-- Logo -->
-        <img src="../../img/logo.png" width="120px" class="img-fluid" alt="">
+        <img src="<?=HOME_URL?>/img/logo.png" width="120px" class="img-fluid" alt="">
       </a>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
@@ -77,9 +77,9 @@
     
 
     <!--texto e imagens -->
-    <?php include_once('../molecules/headers/sub_header_principal.php');
+    <?php include_once( ABSPATH.'/includes/molecules/headers/sub_header_principal.php');
           //include_once('../molecules/headers/sub_header_features.php'); ?>
-    
+   
 
   </div>
 </div>

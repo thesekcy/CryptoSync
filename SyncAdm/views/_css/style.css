@@ -1,0 +1,116 @@
+.x_panel {
+    width: 100%;
+    padding: 10px 17px;
+    display: inline-block;
+    background: #fff;
+    border: 1px solid #E6E9ED;
+    -webkit-column-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+    column-break-inside: avoid;
+    opacity: 1;
+    transition: all .2s ease;
+}
+.x_panel, .x_title {
+    margin-bottom: 10px;
+}
+.degrees:after, .x_content, .x_panel {
+    position: relative;
+}
+
+.fixed_height_320 {
+    height: 320px;
+}
+.x_title {
+    border-bottom: 2px solid #E6E9ED;
+    padding: 1px 5px 6px;
+}
+
+.x_panel, .x_title {
+    margin-bottom: 10px;
+}
+.x_title h2 {
+    margin: 5px 0 6px;
+    float: left;
+    display: block;
+}
+
+.clearfix:after, form:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.sidebar-footer {
+    bottom: 0;
+    clear: both;
+    display: block;
+    padding: 5px 0 0;
+    position: fixed;
+    width: 230px;
+    background: #37A459;
+    z-index: 999;
+}
+.sidebar-footer a {
+    padding: 7px 0 3px;
+    text-align: center;
+    width: 25%;
+    font-size: 17px;
+    display: block;
+    float: left;
+    background: #0C0716;
+    cursor: pointer;
+}
+.sidebar-footer a:hover{
+    color: #3AF072;
+} 
+a {
+    color: #FFFF !important;
+}
+.nav>li>a>img {
+    max-width: none;
+}
+
+.user-profile img {
+    width: 29px;
+    height: 29px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.skin-blue .wrapper, .skin-blue .main-sidebar, .skin-blue .left-side {
+    background-color: #0c0716 !important;
+}
+.img-circle {
+    border-radius: 50%;
+    border: 2px solid #3AF072;
+}
+.skin-blue .sidebar-menu>li:hover>a, .skin-blue .sidebar-menu>li.active>a {
+    color: #37A459 !important;
+    background: #0c0716 !important;
+    border-left-color: #3AF072 !important;
+}
+.skin-blue .main-header .logo {
+    background-color: #37a459 !important;
+}
+.skin-blue .main-header .navbar {
+    background-color: #0c0716 !important;
+}
+input.parsley-error, select.parsley-error, textarea.parsley-error {
+    background: #FAEDEC;
+    border: 1px solid #E85445;
+}
+
+//Definindo variaveis para cores padrões
+$DefaultColor:          #3AF072; //Cor verde padrão para destaque
+$BGHeaderColor:         #0C0716; //Cor para o background do header
+$BGColor:               #F3F3F3; //Cor padrão de todo o body
+$BGContentColor:        #FFFFFF; //Cor padrão de fundo do que vem abaixo do header
+$txtHeaderColor:        #FFFFFF; //Cor padrão de fundo do que vem abaixo do header
+$divisaoColor:          #37A459; //Divisão color
+$backgroundProcessos:   #cdf3d8; //background color da area processos realizados
