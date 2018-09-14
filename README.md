@@ -7,7 +7,7 @@ description: >-
 
 # CryptoSync
 
-## Introdução {#introducao}
+## Introdução
 
 Independentemente da classe social, é comum ver que muitas pessoas sofrem com fraudes contratuais, onde há perda de imóveis, veículos entre outros bens. Entre as fraudes a mais comum é o de imóveis e terrenos e há diversas notícias mensalmente de pessoas que sofreram com isto.
 
@@ -17,15 +17,15 @@ Também é visto que há uma falha de comunicação entre os cartórios que prec
 
 Com todos esses aspectos em mente, foi elaborada a ideia de se criar uma plataforma web que auxilie os usuários a encontrar segurança e agilidade na autenticação contratual. Na plataforma, será possível autenticar documentos e outros arquivos por meio de uma plataforma descentralizada conhecida como Blockchain, e também indiretamente ajudará a reduzir filas em cartórios públicos.
 
-## Tema {#tema}
+## Tema
 
 Criação de um sistema Web de Smart Contracts baseado em Blockchain para os cartórios que irá acabar com a duplicidade de contratos.
 
-## Delimitação do Tema {#delimitacao-do-tema}
+## Delimitação do Tema
 
 Erradicar duplicidade de contratos por meio de uma tecnologia chamada de Blockchain onde os dados guardados dentro dela não podem ser manipulados, serão feitas comparações de contratos com os Smart Contracts para detectar duplicidades por meio da criptografia chamada hash.
 
-## Problema de Pesquisa {#problema-de-pesquisa}
+## Problema de Pesquisa
 
 Gerando um contrato de compra e venda, uma pessoa pode fazer a transferência para duas pessoas distintas em diferentes cartórios, tento isso como base, o que é preciso parar aprimorar a forma de validação de documentos nos cartórios para diminuir o índice de fraudes?
 
@@ -33,19 +33,19 @@ Gerando um contrato de compra e venda, uma pessoa pode fazer a transferência pa
 
 Desenvolver um Sistema Web baseado em Smart Contracts para reduzir fraudes contratuais.
 
-## Objetivo Específico  {#objetivo-especifico}
+## Objetivo Específico
 
 Analisar o cenário atual dos cartórios e desenvolver um sistema web utilizando Smart Contracts juntamente com o Blockchain para solucionar os problemas encontrados, focando nas duplicidades contratuais.
 
-## Justificativa {#justificativa}
+## Justificativa
 
 Se sabe que o método como o cartório trabalha tem deficiências, é comum encontrar notícias de fraudes, uma casa ou um carro vendido para duas ou três pessoas, logo foi elaborado a ideia de utilizar uma nova tecnologia de Smart Contracts onde a chance dessas fraudes acontecerem caem drasticamente com um método de comparação em tempo real dos dados presentes nos contratos.
 
-## Hipótese {#hipotese}
+## Hipótese
 
 Um Sistema Web que irá erradicar com atos fraudulentos de duplicidade de contratos entre diferentes cartórios.
 
-## Metodologia {#metodologia}
+## Metodologia
 
 Para a elaboração deste trabalho foi feita uma pesquisa por notícias que constatava que há falhas no modo como os cartórios autenticam os contratos, onde foi encontrado diversas notícias de pessoas que sofreram perdas pelo método atual.
 
