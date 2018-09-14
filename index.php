@@ -20,6 +20,7 @@ $modulo = $_GET['pag'];
   //Features
   include_once(ABSPATH.'/includes/organisms/header-user.php'); 
 
+        <!-- Teste -->
 
 // Verifica se o GET pagina esta vazio se sim inclui a pagina principal do sistema
   if($modulo != ""){
