@@ -1,4 +1,6 @@
-<?php require_once 'config.php'; ?>
+<?php require_once 'config.php'; 
+$modulo = $_GET['pag'];
+?>
 <!doctype html>
 <html lang="pt-br">
 <head>
@@ -17,7 +19,21 @@
   <?php
   //Features
   include_once(ABSPATH.'/includes/organisms/header-user.php'); 
-  include_once(ABSPATH.'/includes/organisms/features_page.php');
+
+
+// Verifica se o GET pagina esta vazio se sim inclui a pagina principal do sistema
+  if($modulo != ""){
+  // Verifica se existe o arquivo com nome se sim Inclui no carregamento
+    if(file_exists(ABSPATH.'/includes/organisms/'.$modulo.'.php')){
+      include ABSPATH.'/includes/organisms/'.$modulo.'.php'; 
+    }else{
+    // Se não existe Redireciona para pagina de erro
+    echo '<meta http-equiv="Refresh" content="0; url="'.HOME_URL.'/includes/pages/erro.php">';
+    echo '<script type="text/javascript">window.location.href="'.HOME_URL.'/includes/pages/erro.php";</script>';
+    } 
+  }else{ 
+    include_once(ABSPATH.'/includes/organisms/features_page.php');
+  }
   include_once(ABSPATH.'/includes/organisms/footer.php');
   ?>
   <!-- Optional JavaScript -->

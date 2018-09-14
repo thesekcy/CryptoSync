@@ -3,8 +3,6 @@
 
 <div class="bgHeader col-12">
   <div class="container col-8">
-
-
     <!-- Primeira NavBar -->
     <nav class="navbar navbar-expand-lg navHeaderTop">
       <a class="navbar-brand" href="#">
@@ -15,23 +13,22 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse navbarSite">
         <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="">INICIO</a>
+          <li class="nav-item ">
+            <a class="nav-link" href="index?pag=features_page">INICIO</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">COMO FUNCIONA</a>
+            <a class="nav-link" href="index?pag=features_index">COMO FUNCIONA</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">CLIENTES</a>
+            <a class="nav-link" href="index?pag=partners">CLIENTES</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">PREÇOS</a>
+            <a class="nav-link" href="index?pag=preco">PREÇOS</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">SUPORTE</a>
+            <a class="nav-link" href="index?pag=suporte">SUPORTE</a>
           </li>
         </ul>
       </div>
@@ -54,7 +51,6 @@
                 <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="********">
               </div>
               <div class="form-check">
-
               </div>
               <button type="submit" class="btn btn-outline-primary btnlogin-dropdown">Entrar</button>
             </form>
@@ -62,25 +58,16 @@
             <a class="dropdown-item" id="formLogin" href="#">Ainda não possui uma conta? Cadastre-se</a>
             <a class="dropdown-item" id="formLogin" href="#">Esqueceu a senha?</a>
           </div>
-
         </li>
-
         <!-- Botão de Cadastre-se -->
         <li class="nav-item">
           <a class="nav-link btn btn-primary ml-2 btnCadastrar" data-toggle="dropdown" id="navDrop" href="">Cadastre-se</a>
         </li>
       </ul>
     </nav>
-
     <!-- NavBar Menu com toggler expand -->
     <!-- Em telas menores os itens da lista ficam dentro de um botão -->
-    
-
     <!--texto e imagens -->
-    <?php include_once( ABSPATH.'/includes/molecules/headers/sub_header_principal.php');
-          //include_once('../molecules/headers/sub_header_features.php'); ?>
-   
-
+    <?=(! isset($_GET['pag']) || $_GET['pag'] =='features_page')?include_once( ABSPATH.'/includes/molecules/headers/sub_header_principal.php'):null?>
   </div>
 </div>
-
