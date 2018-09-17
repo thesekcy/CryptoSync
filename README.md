@@ -63,30 +63,31 @@ Está parte é voltada para o método correto de usar o GitHub no projeto, onde 
 > 
 
 > ## Padrões de Commit
-
-    Atualização de Conteúdo 1.5.2 -- CryptoSync
-    Fábio Santana - 17/09/2018
- 
-
-###### **--seguindo a regra de Nomenclatura de Versionamento acima.**
-
- 
-
-    ||Conteúdo adicionado
-             
-     - Lista de conteúdo adicionado sem termos muito técnicos, será a visualização para o usuário final.
-
-
-    ||Conteúdo técnico adicionado
-    
-    - Lista de conteúdo adicionado com termos técnicos, será usado para o entendimento da equipe no que foi realmente alterado ou adicionado.
-
-
-    ||Bugs/Problemas corrigidos
-    
-    - Relatar bugs e problemas que já foram encontrados e respectivamente corrigidos.
-    
-    
-    ||Bugs/Problemas encontrados
-    	
-    - Relatar bugs encontrados que ainda não foram corrigidos, caso o bug seja critico é aconselhável que seja corrigido imediatamente.
+> 
+>     Atualização de Conteúdo 1.5.2 -- CryptoSync
+>     Fábio Santana - 17/09/2018  
+> 
+> ###### **--seguindo a regra de Nomenclatura de Versionamento acima.**
+> 
+>  
+> 
+>     ||Conteúdo adicionado
+>              
+>      - Lista de conteúdo adicionado sem termos muito técnicos, será a visualização para o usuário final.
+> 
+> 
+>     ||Conteúdo técnico adicionado
+>     
+>     - Lista de conteúdo adicionado com termos técnicos,será usado para o entendimento da equipe
+>      no que foi realmente alterado ou adicionado.
+> 
+> 
+>     ||Bugs/Problemas corrigidos
+>     
+>     - Relatar bugs e problemas que já foram encontrados e respectivamente corrigidos.
+>     
+>     
+>     ||Bugs/Problemas encontrados
+>     	
+>     - Relatar bugs encontrados que ainda não foram corrigidos,
+>     caso o bug seja critico é aconselhável que seja corrigido imediatamente.
