@@ -44,3 +44,7 @@ $modulo = $_GET['pag'];
   <script> AOS.init();</script>
 </body>
 </html>
+
+<?php 
+//arquivo bosta
+// ?>
