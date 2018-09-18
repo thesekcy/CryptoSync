@@ -54,7 +54,7 @@ Está parte é voltada para o método correto de usar o GitHub no projeto, onde 
 >> Basicamente, a hierarquia de branchs é a seguinte:
 >> 
 >> **master <-- release/ <-- development <-- feature/ feature.**
->>		**Tendo ainda a hotfix/ ligada diretamente a master, release e development.**      			
+**Tendo ainda a hotfix/ ligada diretamente a master, release e development.**      			
 
 
 >### **Nomenclatura de versionamento**
