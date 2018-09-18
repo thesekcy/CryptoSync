@@ -10,7 +10,7 @@ Abaixo alguns arquivos importantes para o desenvolvimento do projeto como **Diag
 
 
 > **Diagrama de Caso de Uso**
-![enter image description here](https://github.com/thesekcy/CryptoSync/blob/master/_utilitarios/Diagrama_Caso_de_Uso.png?raw=true)
+![enter image description here]https://github.com/thesekcy/CryptoSync/blob/master/_utilitarios/Diagrama_Caso_de_Uso.png?raw=true)
 
 > **Diagrama de Classe**
 > *Em desenvolvimento!*
