@@ -10,6 +10,9 @@ $modulo = $_GET['pag'];
   <link rel="stylesheet" href="<?=HOME_URL?>/node_modules/bootstrap/compiler/bootstrap.css">
   <link rel="stylesheet" href="<?=HOME_URL?>/node_modules/bootstrap/compiler/style.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- JQuery e Validate -->
+  <script src="<?=HOME_URL?>/node_modules/jquery/dist/jquery.js"></script>
+  <script src="<?=HOME_URL?>/SyncAdm/views/_js/jquery.validate.min.js"></script>
   <!-- Icon Awesome-->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <!-- Titulo -->
@@ -37,7 +40,6 @@ $modulo = $_GET['pag'];
   ?>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="<?=HOME_URL?>/node_modules/jquery/dist/jquery.js"></script>
   <script src="<?=HOME_URL?>/node_modules/popper.js/dist/umd/popper.js"></script>
   <script src="<?=HOME_URL?>/node_modules/bootstrap/dist/js/bootstrap.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
