@@ -1,6 +1,6 @@
 <?php session_start();
   if(isset($_SESSION['logado']) &&  $_SESSION['logado'] == 'SIM'):
-    header("Location: home.php");
+    header("Location: ".HOME_URL."/SyncAdm/");
   endif;
 ?>
 <!-- Icon Awesome-->
@@ -50,15 +50,15 @@
             <form class="px-4 py-3" id="formUser">
               <div class="form-group">
                 <label for="exampleDropdownFormEmail1">Email</label>
-                <input type="email" class="form-control email" name="email" id="exampleDropdownFormEmail1" placeholder="email@exemplo.com">
+                <input type="email" class="form-control" name="email" id="email" placeholder="email@exemplo.com">
               </div>
               <div class="form-group">
                 <label for="exampleDropdownFormPassword1">Senha</label>
-                <input type="password" class="form-control password" name="password" id="exampleDropdownFormPassword1" placeholder="********">
+                <input type="password" class="form-control" name="password" id="password" placeholder="********">
               </div>
               <div class="form-check">
               </div>
-              <button type="submit" class="btn btn-outline-primary btnlogin-dropdown">Entrar</button>
+              <button type="submit" class="btn btn-outline-primary btnlogin-dropdown" name="logar" id="logar">Entrar</button>
             </form>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" id="formLogin" href="#">Ainda não possui uma conta? Cadastre-se</a>
@@ -67,7 +67,7 @@
         </li>
         <!-- Botão de Cadastre-se -->
         <li class="nav-item">
-          <a class="nav-link btn btn-primary ml-2 btnCadastrar submit"  data-toggle="dropdown" name="submit" id="navDrop" href="">Cadastre-se</a>
+          <a class="nav-link btn btn-primary ml-2 btnCadastrar "  data-toggle="dropdown"  href="">Cadastre-se</a>
         </li>
       </ul>
     </nav>
@@ -92,33 +92,24 @@
       },
       // Envia o formulario quando valido
       submitHandler: function(form) {
-       // var data = $("#formUser").serialize();
-        var email = $('.email').val();
-        var senha = $('.password').val();
-        var acao =  $('.submit').val();
-
-        alert("Nome: "+email+" Semha: "+senha+" Ação: "+acao); 
-
+        var data = $("#formUser").serialize();
         $.ajax({
           url:'<?=HOME_URL?>/php/user.php',
           type:'POST',
-          //dataType: 'json',
-          data:{
-            acao:acao,
-            email:email,
-            senha:senha
-          },
+          dataType: 'json',
+          data:data,
           beforeSend: function()
           {
-              $("#mensagem").html('Validando ...');
+              $("#logar").html('Validando ...');
           },
           success: function(data)
           {
             if(data.codigo == "1"){ 
-              window.location.href = "home.php";
+              window.location.href = '<?=HOME_URL?>/SyncAdm/';
             }
             else{     
               $("#mensagem").html('<div class="alert alert-warning"><ul><li>' + data.mensagem + '</li></ul></div>');
+              $("#logar").html('Entrar');
             }
           },
           error: function(data)

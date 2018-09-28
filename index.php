@@ -1,6 +1,11 @@
-<?php require_once 'config.php'; 
-$modulo = $_GET['pag'];
+<?php require_once 'config.php';
+ session_start();
+  if(isset($_SESSION['logado']) &&  $_SESSION['logado'] == 'SIM'):
+    header("Location: ".HOME_URL."/SyncAdm/");
+  endif;
+  $modulo = $_GET['pag'];
 ?>
+
 <!doctype html>
 <html lang="pt-br">
 <head>
