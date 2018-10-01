@@ -3,8 +3,6 @@
     header("Location: ".HOME_URL."/SyncAdm/");
   endif;
 ?>
-<!-- Icon Awesome-->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 
 <div class="bgHeader col-12">
   <div class="container col-8">
@@ -12,7 +10,7 @@
     <nav class="navbar navbar-expand-lg navHeaderTop">
       <a class="navbar-brand" href="#">
         <!-- Logo -->
-        <img src="<?=HOME_URL?>/img/logo.png" width="120px" class="img-fluid" alt="">
+        <img src="<?=HOME_URL?>/_img/logo.svg" width="120px" class="img-fluid" alt="">
       </a>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
@@ -73,8 +71,6 @@
     </nav>
     <!-- NavBar Menu com toggler expand -->
     <!-- Em telas menores os itens da lista ficam dentro de um botão -->
-    <!--texto e imagens -->
-    <?=(! isset($_GET['pag']) || $_GET['pag'] =='features_page')?include_once( ABSPATH.'/includes/molecules/headers/sub_header_principal.php'):null?>
   </div>
 </div>
 <script type="text/javascript" charset="utf-8" async defer>
@@ -104,10 +100,10 @@
           },
           success: function(data)
           {
-            if(data.codigo == "1"){ 
+            if(data.codigo == "1"){
               window.location.href = '<?=HOME_URL?>/SyncAdm/';
             }
-            else{     
+            else{
               $("#mensagem").html('<div class="alert alert-warning"><ul><li>' + data.mensagem + '</li></ul></div>');
               $("#logar").html('Entrar');
             }
@@ -122,4 +118,16 @@
     });
 
   });
+</script>
+
+<script type="text/javascript">
+$(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+
+    if (scroll > 500) {
+        $('.bgHeader').css('background-color','#0C0716');
+    } else {
+        $('.bgHeader').css('background-color','transparent');
+    }
+});
 </script>

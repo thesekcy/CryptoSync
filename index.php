@@ -6,48 +6,82 @@
   $modulo = $_GET['pag'];
 ?>
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <!-- Required meta tags -->
+  <head>
+  <!-- Descrição e informações basicas.
+  ================================================== -->
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="<?=HOME_URL?>/node_modules/bootstrap/compiler/bootstrap.css">
-  <link rel="stylesheet" href="<?=HOME_URL?>/node_modules/bootstrap/compiler/style.css">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <!-- JQuery e Validate -->
-  <script src="<?=HOME_URL?>/node_modules/jquery/dist/jquery.js"></script>
-  <script src="<?=HOME_URL?>/SyncAdm/views/_js/jquery.validate.min.js"></script>
-  <!-- Icon Awesome-->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-  <!-- Titulo -->
-  <title>Nome do Projeto</title>
-</head>
-<body>
-  <?php
-  //Features
-  include_once(ABSPATH.'/includes/organisms/header-user.php'); 
+  <meta http-equiv="x-ua-compatible" content="IE=9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-// Verifica se o GET pagina esta vazio se sim inclui a pagina principal do sistema
-  if($modulo != ""){
-  // Verifica se existe o arquivo com nome se sim Inclui no carregamento
-    if(file_exists(ABSPATH.'/includes/organisms/'.$modulo.'.php')){
-      include ABSPATH.'/includes/organisms/'.$modulo.'.php'; 
-    }else{
-    // Se não existe Redireciona para pagina de erro
-    echo '<meta http-equiv="Refresh" content="0; url="'.HOME_URL.'/includes/pages/erro.php">';
-    echo '<script type="text/javascript">window.location.href="'.HOME_URL.'/includes/pages/erro.php";</script>';
-    } 
-  }else{ 
-    include_once(ABSPATH.'/includes/organisms/features_page.php');
-  }
-  include_once(ABSPATH.'/includes/organisms/footer.php');
-  ?>
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="<?=HOME_URL?>/node_modules/popper.js/dist/umd/popper.js"></script>
-  <script src="<?=HOME_URL?>/node_modules/bootstrap/dist/js/bootstrap.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script> AOS.init();</script>
-</body>
+  <title>CryptoSync - Site Oficial!</title>
+  <meta name="description" content="Plataforma web voltada a segurança utilizando uma tecnologia descentralizada. O Blockchain.">
+  <meta name="keywords" content="Blockchain, Ethereum, Smart Contracts, Contratos inteligentes, Segurança, Facilidade, Plataforma descentralizada.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="CryptoSync">
+  <link rel="icon" href="<?=HOME_URL?>/_img/buffer.svg">
+
+  <!-- Icones
+  ================================================== -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+  <!-- Bootstrap | CSS
+  ================================================== -->
+
+  <link rel="stylesheet" href="<?=HOME_URL?>/_css/bootstrap.css">
+  <link rel="stylesheet" href="<?=HOME_URL?>/_css/style.css">
+  <link rel="stylesheet" href="<?=HOME_URL?>/_css/particles.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- JQuery | Validate
+  ================================================== -->
+  <script src="<?=HOME_URL?>/_js/jquery.js"></script>
+  <script src="<?=HOME_URL?>/SyncAdm/views/_js/jquery.validate.min.js"></script>
+
+</head>
+  <body>
+
+    <?php
+
+    include_once(ABSPATH.'/includes/organisms/header-user.php');
+    include_once(ABSPATH.'/includes/organisms/page-user-nologin.php');
+    include_once(ABSPATH.'/includes/organisms/footer-user.php');
+
+      /*//Features
+      include_once(ABSPATH.'/includes/organisms/header-user.php');
+
+      // Verifica se o GET pagina esta vazio se sim inclui a pagina principal do sistema
+      if($modulo != ""){
+        // Verifica se existe o arquivo com nome se sim Inclui no carregamento
+        if(file_exists(ABSPATH.'/includes/organisms/'.$modulo.'.php')){
+          include ABSPATH.'/includes/organisms/'.$modulo.'.php';
+        }else{
+          // Se não existe Redireciona para pagina de erro
+          echo '<meta http-equiv="Refresh" content="0; url="'.HOME_URL.'/includes/pages/erro.php">';
+          echo '<script type="text/javascript">window.location.href="'.HOME_URL.'/includes/pages/erro.php";</script>';
+        }
+      }else{
+        include_once(ABSPATH.'/includes/organisms/features_page.php');
+      }
+      include_once(ABSPATH.'/includes/organisms/footer.php');*/
+    ?>
+
+    <!-- Arquivos JS
+    ================================================== -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="<?=HOME_URL?>/_js/popper.min.js"></script>                                 <!--  JS usado no SASS -->
+    <script src="<?=HOME_URL?>/_js/bootstrap.min.js"></script>                              <!--  JS usado no SASS -->
+    <script src="<?=HOME_URL?>/_js/particles.js/particles.js"></script>                 <!--  JS usado no particles.js -->
+    <script src="<?=HOME_URL?>/_js/particles.js/app.js"></script>                       <!--  JS usado no particles.js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>                     <!--  JS usado nas animações -->
+    <script> AOS.init();</script>                                                       <!--  JS usado nas animações -->
+
+    <script type="text/javascript"> onkeyup=""                                          //    JS usado no particles.js
+      particlesJS.load('particles-js', '<?=HOME_URL?>/_js/particles.js/particles.json', function() {});
+    </script>
+
+
+  </body>
 </html>
