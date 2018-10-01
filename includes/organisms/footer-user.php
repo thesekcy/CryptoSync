@@ -1,70 +1,66 @@
-<div class="container col-12 footer">
-	<div class="container col-10 global">
-		<div class="row">
-			<div role="main" class="col-md-4">
-				<img src="<?=HOME_URL?>/_img/logo.svg" alt="" class="img-fluid" width="250px">
+<div class="section third">
+	<div class="container col-12 footer">
 
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				<br><br>
+		<div class="row linha1">
+			<div class="col coluna1">
+				1 of 2
+			</div>
+			<div class="col coluna2">
+				<form>
+				  <div class="form-group"  align="center" >
+				    <label for="exampleInputEmail1">Email address</label>
+				    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+				    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+				  </div>
+				  <div class="form-check">
+				    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+				    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+				  </div>
+				  <button type="submit" class="btn btn-primary">Submit</button>
+				</form>
+			</div>
+		</div>
 
-				<i class="fab fa-facebook-f"></i>
-				<i class="fab fa-twitter"></i>
-				<i class="fab fa-youtube"></i>
-				<i class="fab fa-linkedin-in"></i>
-				<i class="fab fa-instagram"></i>
-
+		<div class="row footer2">
+			<div class="col coluna3">
+				<img src="<?=HOME_URL?>/_img/logo2.svg" alt="" class="img-fluid" width="150px">
+				<p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 			</div>
 
-			<div role="complementary" class="col-md-4 global-links">
+			<div class="col coluna4">
 				<div class="row">
-
 					<div class="col-4 col-md">
-						<h5>Comercial</h5>
-						<ul class="list-unstyled text-small">
-							<li><a class="text-muted" href="#">Inicio</a></li>
-							<li><a class="text-muted" href="#">Produtos</a></li>
-							<li><a class="text-muted" href="#">Preços</a></li>
-							<li><a class="text-muted" href="#">Clientes</a></li>
-							<li><a class="text-muted" href="#">Suporte</a></li>
-							<li><a class="text-muted" href="#">Sobre-nós</a></li>
-						</ul>
-					</div>
-					<div class="col-4 col-md">
-						<h5>Empresarial</h5>
-						<ul class="list-unstyled text-small">
-							<li><a class="text-muted" href="#">Inicio</a></li>
-							<li><a class="text-muted" href="#">Contatos</a></li>
-							<li><a class="text-muted" href="#">Planos</a></li>
-							<li><a class="text-muted" href="#">Recursos</a></li>
-							<li><a class="text-muted" href="#">Suporte</a></li>
-						</ul>
-					</div>
-					<div class="col-4 col-md">
-						<h5>Links</h5>
+						<h5>Companhia</h5>
 						<ul class="list-unstyled text-small">
 							<li><a class="text-muted" href="#">Comercial</a></li>
 							<li><a class="text-muted" href="#">Empresarial</a></li>
-							<li><a class="text-muted" href="#">Privacidade</a></li>
-							<li><a class="text-muted" href="#">Termos</a></li>
-							<li><a class="text-muted" href="#">Localização</a></li>
 						</ul>
 					</div>
+					<div class="col-4 col-md">
+						<h5>Suporte</h5>
+						<ul class="list-unstyled text-small">
+							<li><a class="text-muted" href="#">Ajuda</a></li>
+							<li><a class="text-muted" href="#">FAQ</a></li>
+							<li><a class="text-muted" href="#">Contato</a></li>
+						</ul>
+					</div>
+					<div class="col-4 col-md">
+						<h5>Legal</h5>
+						<ul class="list-unstyled text-small">
+							<li><a class="text-muted" href="#">Termos</a></li>
+							<li><a class="text-muted" href="#">Privacidade</a></li>
+							<li><a class="text-muted" href="#">Reembolsos</a></li>
+						</ul>
+					</div>
+
 				</div>
 			</div>
-
-			<div role="complementary" class="col-md-4 border-newslatter">
-				<div>
-					<div class="newslatter">
-						<h5 class="text-uppercase">ASSINE NOSSA NEWSLETTER</h5><br>
-						<form class="form-inline">
-							<input class="email_newslatter" type="text" placeholder="Email">
-						</form>
-						<br><br>
-						<p class="text-right copy">Copyright @ 2018 CryptoSYNC.<br>
-						Todos os direitos reservados.</p>
-
-					</div>
-				</div>
+		</div>
+		<div class="col coluna5 ">
+			<div class="d-flex justify-content-center">
+				<p class="direitos">
+					© 2018. All Rights Reserved to CryptoSync.
+				</p>
 			</div>
 		</div>
 	</div>

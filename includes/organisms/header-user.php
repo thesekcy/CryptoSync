@@ -119,15 +119,3 @@
 
   });
 </script>
-
-<script type="text/javascript">
-$(window).scroll(function() {
-    var scroll = $(window).scrollTop();
-
-    if (scroll > 500) {
-        $('.bgHeader').css('background-color','#0C0716');
-    } else {
-        $('.bgHeader').css('background-color','transparent');
-    }
-});
-</script>
