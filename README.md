@@ -19,7 +19,7 @@ Abaixo alguns arquivos importantes para o desenvolvimento do projeto como **Diag
 > *Em desenvolvimento!*
 
 > **Diagrama de Atividade**
-> *Em desenvolvimento!*
+![enter image description here](https://github.com/thesekcy/CryptoSync/blob/master/_utilitarios/Untitled%20Diagram%20(1).png?raw=true)
 
 > **Mapa de Atividades**
 > ![enter image description here](https://github.com/thesekcy/CryptoSync/blob/master/_utilitarios/Mapa%20De%20Atividades.png?raw=true)
