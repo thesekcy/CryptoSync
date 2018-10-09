@@ -32,7 +32,6 @@
 
   <link rel="stylesheet" href="<?=HOME_URL?>/_css/bootstrap.css">
   <link rel="stylesheet" href="<?=HOME_URL?>/_css/style.css">
-  <link rel="stylesheet" href="<?=HOME_URL?>/_css/fullpage.min.css">
   <link rel="stylesheet" href="<?=HOME_URL?>/_css/particles.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -75,9 +74,6 @@
     <script src="<?=HOME_URL?>/_js/bootstrap.min.js"></script>                              <!--  JS usado no SASS -->
     <script src="<?=HOME_URL?>/_js/particles.js/particles.js"></script>                 <!--  JS usado no particles.js -->
     <script src="<?=HOME_URL?>/_js/particles.js/app.js"></script>                       <!--  JS usado no particles.js -->
-    <script src="<?=HOME_URL?>/_js/scrpççpverfçpw.min.js"></script>
-    <script src="<?=HOME_URL?>/_js/easings.min.js"></script>
-    <script src="<?=HOME_URL?>/_js/fullpage.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>                     <!--  JS usado nas animações -->
     <script> AOS.init();</script>                                                       <!--  JS usado nas animações -->
 

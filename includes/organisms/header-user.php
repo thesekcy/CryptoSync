@@ -5,7 +5,7 @@
 ?>
 
 <div class="bgHeader col-12">
-  <div class="container col-8">
+  <div class="container col-10">
     <!-- Primeira NavBar -->
     <nav class="navbar navbar-expand-lg navHeaderTop">
       <a class="navbar-brand" href="#">
