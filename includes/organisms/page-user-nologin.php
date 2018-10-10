@@ -75,11 +75,11 @@ Sobre nós Section
 <!--==========================
   Call To Action Section
 ============================-->
-<section id="call-to-action" class="wow fadeIn">
+<section class="jumbo-eco">
   <div class="container text-center">
-    <h3>Call To Action</h3>
+    <h3>Ecologicamente Correto</h3>
     <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <a class="cta-btn" href="#">Call To Action</a>
+    <a class="cta-btn" href="#">Começar</a>
   </div>
 </section><!-- #call-to-action -->
 
@@ -221,18 +221,27 @@ Features Section
 
           <div class="d-flex justify-content-center clients-carousel">
             <div class="row">
-              <div class="col">
-                <img src="<?=HOME_URL?>/_img/clients/client-1.png" alt="">
-                <img src="<?=HOME_URL?>/_img/clients/client-2.png" alt="">
-                <img src="<?=HOME_URL?>/_img/clients/client-3.png" alt="">
-                <img src="<?=HOME_URL?>/_img/clients/client-4.png" alt="">
-                <img src="<?=HOME_URL?>/_img/clients/client-5.png" alt="">
-                <img src="<?=HOME_URL?>/_img/clients/client-6.png" alt="">
+              <div class="col-sm-4">
+                <img src="_img/clients/client-1.png" alt="">
+              </div>
+              <div class="col-sm-4">
+                <img src="_img/clients/client-2.png" alt="">
+              </div>
+              <div class="col-sm-4">
+                <img src="_img/clients/client-3.png" alt="">
+              </div>
+              <div class="col-sm-4">
+                <img src="_img/clients/client-4.png" alt="">
+              </div>
+              <div class="col-sm-4">
+                <img src="_img/clients/client-5.png" alt="">
+              </div>
+              <div class="col-sm-4">
+                <img src="_img/clients/client-6.png" alt="">
               </div>
             </div>
           </div>
-        </div>
-      </section><!-- #clients -->
+        </section><!-- #clients -->
 
 <!--==========================
 ULTIMO - Preços
@@ -329,6 +338,80 @@ ULTIMO - Preços
     </div>
   </div>
 </section>
+
+
+
+
+
+
+
+
+<!--==========================
+  Testemunhos Section
+  ============================-->
+  <section class="section-bg testemunhos">
+    <div class="container">
+      <div class="section-title text-center">
+        <h2>testemunhos</h2>
+      </div>
+      <div class="owl-carousel testemunhos-carousel">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="testemunho-item">
+                <img src="_img/testemunho-1.jpg" class="testemunho-img" alt="">
+                <h3>Saul Goodman</h3>
+                <h4>Ceo &amp; Founder</h4>
+                <p>
+                  <img src="_img/quote-sign-left.png" class="quote-sign-left" alt="">
+                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                  <img src="_img/quote-sign-right.png" class="quote-sign-right" alt="">
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="testemunho-item">
+                <img src="_img/testemunho-2.jpg" class="testemunho-img" alt="">
+                <h3>Sara Wilsson</h3>
+                <h4>Designer</h4>
+                <p>
+                  <img src="_img/quote-sign-left.png" class="quote-sign-left" alt="">
+                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                  <img src="_img/quote-sign-right.png" class="quote-sign-right" alt="">
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="testemunho-item">
+                <img src="_img/testemunho-3.jpg" class="testemunho-img" alt="">
+                <h3>Jena Karlis</h3>
+                <h4>Empresária</h4>
+                <p>
+                  <img src="_img/quote-sign-left.png" class="quote-sign-left" alt="">
+                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                  <img src="_img/quote-sign-right.png" class="quote-sign-right" alt="">
+                </p>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Proximo</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- #testemunhos-->
+
+
+
+
+
+
 
 <!--==========================
 ULTIMO - FOOTER - NEWSLATTER - CONTATO
@@ -435,165 +518,3 @@ ULTIMO - FOOTER - NEWSLATTER - CONTATO
     </div>
   </div>
 </footer><!-- .footer
-
-
-
-
-
-
-
-
-
-  <!--==========================
-    Clients Section
-  ============================
-  <section id="testimonials" class="section-bg wow fadeInUp">
-    <div class="container">
-
-      <header class="section-header">
-        <h3>Testimonials</h3>
-      </header>
-
-      <div class="owl-carousel testimonials-carousel">
-
-        <div class="testimonial-item">
-          <img src="img/testimonial-1.jpg" class="testimonial-img" alt="">
-          <h3>Saul Goodman</h3>
-          <h4>Ceo &amp; Founder</h4>
-          <p>
-            <img src="img/quote-sign-left.png" class="quote-sign-left" alt="">
-            Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-            <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
-          </p>
-        </div>
-
-        <div class="testimonial-item">
-          <img src="img/testimonial-2.jpg" class="testimonial-img" alt="">
-          <h3>Sara Wilsson</h3>
-          <h4>Designer</h4>
-          <p>
-            <img src="img/quote-sign-left.png" class="quote-sign-left" alt="">
-            Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-            <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
-          </p>
-        </div>
-
-        <div class="testimonial-item">
-          <img src="img/testimonial-3.jpg" class="testimonial-img" alt="">
-          <h3>Jena Karlis</h3>
-          <h4>Store Owner</h4>
-          <p>
-            <img src="img/quote-sign-left.png" class="quote-sign-left" alt="">
-            Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-            <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
-          </p>
-        </div>
-
-        <div class="testimonial-item">
-          <img src="img/testimonial-4.jpg" class="testimonial-img" alt="">
-          <h3>Matt Brandon</h3>
-          <h4>Freelancer</h4>
-          <p>
-            <img src="img/quote-sign-left.png" class="quote-sign-left" alt="">
-            Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-            <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
-          </p>
-        </div>
-
-        <div class="testimonial-item">
-          <img src="img/testimonial-5.jpg" class="testimonial-img" alt="">
-          <h3>John Larson</h3>
-          <h4>Entrepreneur</h4>
-          <p>
-            <img src="img/quote-sign-left.png" class="quote-sign-left" alt="">
-            Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-            <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-  </section><!-- #testimonials 
-
-
-
-/* Testimonials Section
---------------------------------*/
-#testimonials {
-  padding: 60px 0;
-}
-
-#testimonials .section-header {
-  margin-bottom: 40px;
-}
-
-#testimonials .testimonial-item {
-  text-align: center;
-}
-
-#testimonials .testimonial-item .testimonial-img {
-  width: 120px;
-  border-radius: 50%;
-  border: 4px solid #fff;
-  margin: 0 auto;
-}
-
-#testimonials .testimonial-item h3 {
-  font-size: 20px;
-  font-weight: bold;
-  margin: 10px 0 5px 0;
-  color: #111;
-}
-
-#testimonials .testimonial-item h4 {
-  font-size: 14px;
-  color: #999;
-  margin: 0 0 15px 0;
-}
-
-#testimonials .testimonial-item .quote-sign-left {
-  margin-top: -15px;
-  padding-right: 10px;
-  display: inline-block;
-  width: 37px;
-}
-
-#testimonials .testimonial-item .quote-sign-right {
-  margin-bottom: -15px;
-  padding-left: 10px;
-  display: inline-block;
-  max-width: 100%;
-  width: 37px;
-}
-
-#testimonials .testimonial-item p {
-  font-style: italic;
-  margin: 0 auto 15px auto;
-}
-
-@media (min-width: 992px) {
-  #testimonials .testimonial-item p {
-    width: 80%;
-  }
-}
-
-#testimonials .owl-nav, #testimonials .owl-dots {
-  margin-top: 5px;
-  text-align: center;
-}
-
-#testimonials .owl-dot {
-  display: inline-block;
-  margin: 0 5px;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: #ddd;
-}
-
-#testimonials .owl-dot.active {
-  background-color: #18d26e;
-}
-
-  -->
