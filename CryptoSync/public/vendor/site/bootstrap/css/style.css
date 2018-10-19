@@ -292,7 +292,7 @@ p.desc {
 /* sobre nós Section
 --------------------------------*/
 .sobre {
-  background: url("../_img/.....jpg") center top no-repeat fixed;
+  /*background: url("../_img/.....jpg") center top no-repeat fixed;*/
   background-size: cover;
   padding: 60px 0 40px 0;
   position: relative;

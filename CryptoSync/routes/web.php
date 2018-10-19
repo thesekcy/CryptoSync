@@ -25,8 +25,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-
-Route::group(['middleware'=>'auth'], function(){
 	Route::get('/perfil','User\PerfilController@index')->name('perfil');
+	Route::post('/perfil/create','User\PerfilController@store')->name('cadPerfil');
+
+	Route::post('/contrato/create','User\ContratoController@store')->name('create-Contrato');
+	Route::get('/contrato/list','User\ContratoController@list')->name('list-contrato');
 	Route::get('/contrato','User\ContratoController@index')->name('contrato');
-});
