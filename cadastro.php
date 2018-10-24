@@ -62,32 +62,56 @@
 	</div>
 
 	<div id="section_2" class="perfil_informacoes">
-		<h1 class="text-center">Formulário</h1>
+		<!-- <header>
+			<div class="bgHeader col-12">
+				<div class="container col-8">
+					<nav class="navbar navbar-expand-lg navHeaderTop">
+					<a class="navbar-brand" href="#">
+						<img src="<?=HOME_URL?>/img/logo.svg" width="120px" class="img-fluid" alt="">
+					</a>
+					</nav>
+				</div>
+			</div>
+		</header> -->
+
 		<div class="container col-12">
-			<form class="cf">
+			
+			<div class="row">
+				<div class="col-3 left-bar">
+				</div>
+				<div class="col-5 mid-bar text-center">
+					Informações de perfil
+				</div>		
+				<div class="col-4 right-bar text-center">
+					informações gerais
+				</div>
+			</div>
+			
+			<!-- <form class="cf"> 
 			<div class="half left cf">
 				<div class="col-10"> 
-
-					<div class="col-5">
-						<div class="form-group">
-							<input type="text" id="input-name" placeholder="* CPF / CNPJ">
+					<div class="row">
+						<div class="col-5">
+							<div class="form-group">
+								<input type="text" id="input-name" placeholder="* CPF / CNPJ">
+							</div>
 						</div>
-					</div>
 
-					<div class="col-5">
-						<div class="form-group">
-							<input type="email" id="input-email" placeholder="* RG / IE">
+						<div class="col-5">
+							<div class="form-group">
+								<input type="email" id="input-email" placeholder="* RG / IE">
+							</div>
 						</div>
-					</div>
 
-					<div class="col-5">
-						<div class="form-group">
-							<input type="text" id="input-subject" placeholder="Subject">
+						<div class="col-5">
+							<div class="form-group">
+								<input type="text" id="input-subject" placeholder="Subject">
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<input type="submit" value="Submit" id="input-submit">
+			<input type="submit" value="Submit" id="input-submit">-->
 			</form>
 		</div>
 	</div>
