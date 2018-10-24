@@ -167,8 +167,6 @@
 										</div>
 									</div>
 								</div>
-
-		
 								</div>
 							</div>
 						</div>
@@ -177,7 +175,68 @@
 				</div>
 				
 				<div class="col-4 right-bar text-center">
-					<p class="title-form">Informações gerais</p>
+					<div class="col-12">
+						<p class="title-form text-center">Outras informações contratuais</p>
+					</div>
+					
+					<div class="separador"></div>
+
+					<div class="row">
+						<div class="col">
+							<div class="form-wrapper">
+							<div class="row">
+								<div class="col-4">
+									<div class="form-group">
+										<label class="form-label" for="first">CEP</label>
+										<input class="form-input" id="cep" type="text" />
+									</div>
+								</div>
+								<div class="col-4">	
+									<div class="form-group">
+										<label class="form-label" for="last">Numero</label>
+										<input class="form-input" id="numero" type="text"/>
+									</div>
+								</div>
+								<div class="col-4">	
+									<div class="form-group">
+										<label class="form-label" for="last">Complemento</label>
+										<input class="form-input" id="complemento" type="text"/>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12">	
+									<div class="form-group">
+										<label class="form-label" for="last">Rua</label>
+										<input class="form-input" id="rua" type="text" />
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12">
+									<div class="form-group">
+										<label class="form-label" for="first">Bairro</label>
+										<input class="form-input" id="bairro" type="text"/>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-6">
+									<div class="form-group">
+										<label class="form-label" for="first">Cidade</label>
+										<input class="form-input" id="cidade" type="text"/>
+									</div>
+								</div>
+								<div class="col-6">	
+									<div class="form-group">
+										<label class="form-label" for="last">UF</label>
+										<input class="form-input" id="uf" type="text"/>
+									</div>
+								</div>
+							</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -206,7 +265,7 @@
 	$(document).ready(function(){
 		(function($){ 
 			$('#data').inputmask("datetime",{
-				mask: "1-2-y", 
+				mask: "99/99/9999", 
 				placeholder: "dd-mm-yyyy", 
 				leapday: "-02-29", 
 				separator: "/", 
