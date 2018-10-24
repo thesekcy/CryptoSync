@@ -31,28 +31,32 @@
 					<div class="wrapper-2">
 						<div class="form-title">Crie sua conta</div>
 						<div class="form">
-							<form>
+							<form class="form">
 								<p class="content-item">
-									<label>Nome completo
-										<input type="text" class="input_nome" placeholder="Nome"  required>
-									</label>
+									<div class="form-group">
+										<label class="form-label">Nome completo</label>
+										<input type="text" class="input_nome" required>
+									</div>
 								</p>
 								<p class="content-item">
-									<label>EMail
-										<input type="text" class="input_email" placeholder="email@email.com" name="email" required>
-									</label>
+									<div class="form-group">
+										<label class="form-label">Email</label>
+										<input type="text" class="input_email" required>
+									</div>
 								</p>
 								<p class="content-item">
-									<label>Senha
-										<input type="password" class="input_senha" placeholder="*********" name="senha" required>
-									</label>
+									<div class="form-group">
+										<label class="form-label">Senha</label>
+										<input type="password" class="input_senha" required>
+									</div>
 								</p>
 								<p class="content-item">
-									<label>repetir Senha
-										<input type="password" class="input_rsenha" placeholder="*********" name="rsenha" required>
-									</label>
+									<div class="form-group">
+										<label class="form-label">Repitir Senha</label>
+										<input type="password" class="input_rsenha" required>
+									</div>
 								</p>
-								<button type="submit"  class="signup" data-element="#section_1">Avnaçar</button>
+								<button type="submit"  class="signup" data-element="#section_1">Avançar</button>
 							</form>
 						</div>
 					</div>
@@ -60,76 +64,189 @@
 			</div>
 		</div>
 	</div>
-
+	
 	<div id="section_2" class="perfil_informacoes">
-		<!-- <header>
-			<div class="bgHeader col-12">
-				<div class="container col-8">
-					<nav class="navbar navbar-expand-lg navHeaderTop">
-					<a class="navbar-brand" href="#">
-						<img src="<?=HOME_URL?>/img/logo.svg" width="120px" class="img-fluid" alt="">
-					</a>
-					</nav>
-				</div>
-			</div>
-		</header> -->
-
 		<div class="container col-12">
-			
 			<div class="row">
 				<div class="col-3 left-bar">
 				</div>
-				<div class="col-5 mid-bar text-center">
-					Informações de perfil
-				</div>		
+				<div class="col-5 mid-bar ">
+					<form action="" class="form">
+						<div class="col-12">
+							<p class="title-form text-center">Dados pessoais</p>
+						</div>
+						<div class="separador"></div>
+
+						<div class="form-wrapper">
+							<div class="form-group">
+								<label class="form-label" for="first">RG</label>
+								<input class="form-input" type="text" />
+							</div>
+							
+							<div class="form-group">
+								<label class="form-label" for="last">CPF</label>
+								<input class="form-input" type="text" />
+							</div>
+							
+							<div class="form-group">
+								<label class="form-label" for="color">Dada de nascimento</label>
+								<input id="data" class="form-input" type="text" />
+							</div>
+							
+							<div class="form-group">
+								<label for="potencial">Sexo</label>
+								<select name="potencial" id="potencial" class="custom-select sources">
+									<option value="M" selected>Masculino</option>
+									<option value="F">Feminino</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="separador"></div>
+						<div class="row">
+							<div class="col-12">
+								<p class="title-form text-center">Dados de Moradia</p>
+							</div>
+						</div>
+						<div class="separador"></div>
+						
+						<div class="row">
+							<div class="col">
+								<div class="form-wrapper">
+
+								<div class="row">
+									<div class="col-4">
+										<div class="form-group">
+											<label class="form-label" for="first">CEP</label>
+											<input class="form-input" id="cep" type="text" />
+										</div>
+									</div>
+									<div class="col-4">	
+										<div class="form-group">
+											<label class="form-label" for="last">Numero</label>
+											<input class="form-input" id="numero" type="text"/>
+										</div>
+									</div>
+									<div class="col-4">	
+										<div class="form-group">
+											<label class="form-label" for="last">Complemento</label>
+											<input class="form-input" id="complemento" type="text"/>
+										</div>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-12">	
+										<div class="form-group">
+											<label class="form-label" for="last">Rua</label>
+											<input class="form-input" id="rua" type="text" />
+										</div>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-12">
+										<div class="form-group">
+											<label class="form-label" for="first">Bairro</label>
+											<input class="form-input" id="bairro" type="text"/>
+										</div>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-6">
+										<div class="form-group">
+											<label class="form-label" for="first">Cidade</label>
+											<input class="form-input" id="cidade" type="text"/>
+										</div>
+									</div>
+									<div class="col-6">	
+										<div class="form-group">
+											<label class="form-label" for="last">UF</label>
+											<input class="form-input" id="uf" type="text"/>
+										</div>
+									</div>
+								</div>
+
+		
+								</div>
+							</div>
+						</div>
+						
+					</form>
+				</div>
+				
 				<div class="col-4 right-bar text-center">
-					informações gerais
+					<p class="title-form">Informações gerais</p>
 				</div>
 			</div>
-			
-			<!-- <form class="cf"> 
-			<div class="half left cf">
-				<div class="col-10"> 
-					<div class="row">
-						<div class="col-5">
-							<div class="form-group">
-								<input type="text" id="input-name" placeholder="* CPF / CNPJ">
-							</div>
-						</div>
-
-						<div class="col-5">
-							<div class="form-group">
-								<input type="email" id="input-email" placeholder="* RG / IE">
-							</div>
-						</div>
-
-						<div class="col-5">
-							<div class="form-group">
-								<input type="text" id="input-subject" placeholder="Subject">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<input type="submit" value="Submit" id="input-submit">-->
-			</form>
 		</div>
 	</div>
-
+	
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 	<script src="jquery.min.js"></script>
-
+	<script src="jquery.inputmask.bundle.js"></script>
+	<script src="viacep.js"></script>
+	
 	<script>
-		$(function(){
-			$('#section_2').hide();
+	
+	$(function(){
+		$('#section_2').hide();
+	});
+	
+	$(function(){
+		$(".signup").click(function(){
+			$('#section_1').hide();
+			$('#section_2').show();
 		});
-
-		$(function(){
-			$(".signup").click(function(){
-				$('#section_1').hide();
-				$('#section_2').show();
+	});
+	</script>
+	
+	<script  type="text/javascript" >
+	$(document).ready(function(){
+		(function($){ 
+			$('#data').inputmask("datetime",{
+				mask: "1-2-y", 
+				placeholder: "dd-mm-yyyy", 
+				leapday: "-02-29", 
+				separator: "/", 
+				alias: "dd/mm/yyyy"
 			});
-		});
+			$("input[id*='cpfcnpj']").inputmask({ mask: ['999.999.999-99', '99.999.999/9999-99'], keepStatic: true });
+			$("input[id*='ierg']").inputmask({ mask: ['99.999.999-9', '999999999-0'], keepStatic: true });
+			$("input[id*='cep']").inputmask({ mask: ['99999-999'], keepStatic: true });
+			$("input[id*='tel']").inputmask({ mask: ['(99)9999-9999', '(99)99999-9999'], keepStatic: true });
+			
+			$("input:radio").change(function(){
+				var valor = $("input[name='gender']:checked").val();
+				
+				if(valor == 'fisica'){
+					$("#c").html('* CPF');
+					$("#r").html('* RG');
+				}else{
+					$("#c").html('* CNPJ');
+					$("#r").html('* Inscrição Estadual');
+				}
+			});
+			
+		})(jQuery)
+	});
+	</script>
+	
+	<script>
+	$('input').focus(function(){
+		$(this).parents('.form-group').addClass('focused');
+	});
+	
+	$('input').blur(function(){
+		var inputValue = $(this).val();
+		if ( inputValue == "" ) {
+			$(this).removeClass('filled');
+			$(this).parents('.form-group').removeClass('focused');  
+		} else {
+			$(this).addClass('filled');
+		}
+	})  
 	</script>
 </body>
 </html>
