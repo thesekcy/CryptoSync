@@ -113,130 +113,85 @@
 						<div class="row">
 							<div class="col">
 								<div class="form-wrapper">
+									<div class="row">
+										<div class="col-4">
+											<div class="form-group">
+												<label class="form-label" for="first">CEP</label>
+												<input class="form-input" id="cep" type="text" />
+											</div>
+										</div>
+										<div class="col-4">	
+											<div class="form-group">
+												<label class="form-label" for="last">Numero</label>
+												<input class="form-input" id="numero" type="text"/>
+											</div>
+										</div>
+										<div class="col-4">	
+											<div class="form-group">
+												<label class="form-label" for="last">Complemento</label>
+												<input class="form-input" id="complemento" type="text"/>
+											</div>
+										</div>
+									</div>
 
-								<div class="row">
-									<div class="col-4">
-										<div class="form-group">
-											<label class="form-label" for="first">CEP</label>
-											<input class="form-input" id="cep" type="text" />
+									<div class="row">
+										<div class="col-12">	
+											<div class="form-group">
+												<label class="form-label" for="last">Rua</label>
+												<input class="form-input" id="rua" type="text" />
+											</div>
 										</div>
 									</div>
-									<div class="col-4">	
-										<div class="form-group">
-											<label class="form-label" for="last">Numero</label>
-											<input class="form-input" id="numero" type="text"/>
-										</div>
-									</div>
-									<div class="col-4">	
-										<div class="form-group">
-											<label class="form-label" for="last">Complemento</label>
-											<input class="form-input" id="complemento" type="text"/>
-										</div>
-									</div>
-								</div>
 
-								<div class="row">
-									<div class="col-12">	
-										<div class="form-group">
-											<label class="form-label" for="last">Rua</label>
-											<input class="form-input" id="rua" type="text" />
+									<div class="row">
+										<div class="col-12">
+											<div class="form-group">
+												<label class="form-label" for="first">Bairro</label>
+												<input class="form-input" id="bairro" type="text"/>
+											</div>
 										</div>
 									</div>
-								</div>
 
-								<div class="row">
-									<div class="col-12">
-										<div class="form-group">
-											<label class="form-label" for="first">Bairro</label>
-											<input class="form-input" id="bairro" type="text"/>
+									<div class="row">
+										<div class="col-6">
+											<div class="form-group">
+												<label class="form-label" for="first">Cidade</label>
+												<input class="form-input" id="cidade" type="text"/>
+											</div>
+										</div>
+										<div class="col-6">	
+											<div class="form-group">
+												<label class="form-label" for="last">UF</label>
+												<input class="form-input" id="uf" type="text"/>
+											</div>
 										</div>
 									</div>
-								</div>
-
-								<div class="row">
-									<div class="col-6">
-										<div class="form-group">
-											<label class="form-label" for="first">Cidade</label>
-											<input class="form-input" id="cidade" type="text"/>
-										</div>
-									</div>
-									<div class="col-6">	
-										<div class="form-group">
-											<label class="form-label" for="last">UF</label>
-											<input class="form-input" id="uf" type="text"/>
-										</div>
-									</div>
-								</div>
 								</div>
 							</div>
 						</div>
-						
 					</form>
 				</div>
 				
-				<div class="col-4 right-bar text-center">
+				<div class="col-4 right-bar">
 					<div class="col-12">
 						<p class="title-form text-center">Outras informações contratuais</p>
 					</div>
-					
+									
 					<div class="separador"></div>
-
-					<div class="row">
-						<div class="col">
-							<div class="form-wrapper">
-							<div class="row">
-								<div class="col-4">
-									<div class="form-group">
-										<label class="form-label" for="first">CEP</label>
-										<input class="form-input" id="cep" type="text" />
-									</div>
+					<div class="form-wrapper">
+						<div class="row">
+							<div class="col-12">
+								<div class="form-group">
+									<label for="potencial">Profissão</label>
+									<select name="potencial" id="potencial" class="custom-select sources">
+										<option value="1" selected>Programador</option>
+										<option value="2">Garoto de Programa</option>
+									</select>
 								</div>
-								<div class="col-4">	
-									<div class="form-group">
-										<label class="form-label" for="last">Numero</label>
-										<input class="form-input" id="numero" type="text"/>
-									</div>
-								</div>
-								<div class="col-4">	
-									<div class="form-group">
-										<label class="form-label" for="last">Complemento</label>
-										<input class="form-input" id="complemento" type="text"/>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-12">	
-									<div class="form-group">
-										<label class="form-label" for="last">Rua</label>
-										<input class="form-input" id="rua" type="text" />
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-12">
-									<div class="form-group">
-										<label class="form-label" for="first">Bairro</label>
-										<input class="form-input" id="bairro" type="text"/>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-6">
-									<div class="form-group">
-										<label class="form-label" for="first">Cidade</label>
-										<input class="form-input" id="cidade" type="text"/>
-									</div>
-								</div>
-								<div class="col-6">	
-									<div class="form-group">
-										<label class="form-label" for="last">UF</label>
-										<input class="form-input" id="uf" type="text"/>
-									</div>
-								</div>
-							</div>
 							</div>
 						</div>
 					</div>
+
 				</div>
 			</div>
 		</div>
