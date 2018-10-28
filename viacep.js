@@ -14,6 +14,8 @@ $(document).ready(function(){
             $('#bairro').val(data.bairro);
             $('#cidade').val(data.localidade);
             $('#uf').val(data.uf);
+
+            
         });
     });
 });
