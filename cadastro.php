@@ -14,7 +14,7 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 </head>
 <body>
-	<div class="content-wrapper">
+	<div class="content-wrapper" id="teste">
 		<div class="content">
 			<div class="signup-wrapper shadow-box">
 				<div class="company-details ">
@@ -26,6 +26,17 @@
 						</div>
 						<h1 class="title">Plataforma Distribuida</h1>
 						<div class="slogan">Crie sua conta e faça parte do novo mundo!</div>
+						<br><br><br>
+						<div class="col-md-12 d-flex justify-content-center">
+							<div id="gender" class="btn-group" data-toggle="buttons">
+								<label class="btn btntypeacc btntypeacc_fisi" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+									<input type="radio" class="fisica" name="gender" value="fisica"> &nbsp; Pessoa Fisica &nbsp;
+								</label>
+								<label class="btn btntypeacc btntypeacc_juri" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+									<input type="radio" class="juridico" name="gender" value="juridica">Pessoa Juridica
+								</label>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="signup-form ">
@@ -44,7 +55,7 @@
 									<p class="content-item">
 										<div class="form-group">
 											<label class="form-label">Email</label>
-											<input type="text" class="input_email" required>
+											<input type="email" class="input_email" required>
 										</div>
 									</p>
 									<p class="content-item">
@@ -66,19 +77,19 @@
 									<p class="content-item">
 										<div class="form-group">
 											<label class="form-label" id="r">RG</label>
-											<input type="text" id="ierg" class="input_nome" required>
+											<input type="text" id="ierg" class="input_rg" required>
 										</div>
 									</p>
 									<p class="content-item">
 										<div class="form-group">
 											<label class="form-label" id="c">CPF</label>
-											<input type="text" id="cpfcnpj" class="input_email" required>
+											<input type="text" id="cpfcnpj" class="input_cpf" required>
 										</div>
 									</p>
 									<p class="content-item">
 										<div class="form-group">
 											<label class="form-label">Data de Nascimento</label>
-											<input id="data" class="form-input" type="text" />
+											<input id="data" class="form-input input_dtNasc" type="text" />
 										</div>
 									</p>
 									<p class="content-item">
@@ -90,6 +101,7 @@
 									    </select>
 										</div>
 									</p>
+									<button type="submit" id="btnVoltar_1" class="signup btnvoltar1">Voltar</button>
 									<button type="submit"  class="signup cadastro2" data-element="#section_2">Avançar</button>
 								</div>
 
@@ -99,19 +111,19 @@
 										  <div class="col-4">
 										    <div class="form-group">
 										      <label class="form-label" for="first">CEP</label>
-										      <input class="form-input" id="cep" type="text" />
+										      <input class="form-input input_cep" id="cep" type="text" />
 										    </div>
 										  </div>
 										  <div class="col-4">
 										    <div class="form-group">
 										      <label class="form-label" for="last">Numero</label>
-										      <input class="form-input" id="numero" type="text"/>
+										      <input class="form-input input_num" id="numero" type="text"/>
 										    </div>
 										  </div>
 										  <div class="col-4">
 										    <div class="form-group">
 										      <label class="form-label" for="last">Complemento</label>
-										      <input class="form-input" id="complemento" type="text"/>
+										      <input class="form-input input_complemento" id="complemento" type="text"/>
 										    </div>
 										  </div>
 										</div>
@@ -122,7 +134,7 @@
 										  <div class="col-12">
 										    <div class="form-group">
 										      <label class="form-label cbSemAnimacao" for="last">Rua</label>
-										      <input class="form-input disabledbutton" id="rua" type="text" readonly="readonly"/>
+										      <input class="form-input disabledbutton input_rua" id="rua" type="text" readonly="readonly"/>
 										    </div>
 										  </div>
 										</div>
@@ -133,7 +145,7 @@
 										  <div class="col-12">
 										    <div class="form-group">
 										      <label class="form-label cbSemAnimacao" for="first">Bairro</label>
-										      <input class="form-input disabledbutton" id="bairro" type="text" readonly="readonly"/>
+										      <input class="form-input disabledbutton input_bairro" id="bairro" type="text" readonly="readonly"/>
 										    </div>
 										  </div>
 										</div>
@@ -144,17 +156,18 @@
 										  <div class="col-8">
 										    <div class="form-group">
 										      <label class="form-label cbSemAnimacao" for="first">Cidade</label>
-										      <input class="form-input disabledbutton" id="cidade" type="text" readonly="readonly"/>
+										      <input class="form-input disabledbutton input_cidade" id="cidade" type="text" readonly="readonly"/>
 										    </div>
 										  </div>
 										  <div class="col-4">
 										    <div class="form-group">
 										      <label class="form-label cbSemAnimacao" for="last">UF</label>
-										      <input class="form-input disabledbutton" id="uf" type="text" readonly="readonly"/>
+										      <input class="form-input disabledbutton input_uf" id="uf" type="text" readonly="readonly"/>
 										    </div>
 										  </div>
 										</div>
 									</p>
+									<button type="submit" id="btnVoltar_2" class="signup btnvoltar2">Voltar</button>
 									<button type="submit"  class="signup cadastro3" data-element="#section_3">Avançar</button>
 								</div>
 
@@ -193,10 +206,11 @@
 									<p class="content-item">
 										<div class="form-group">
 											<label class="form-label">Telefone</label>
-												<input class="form-input tel" name="tel" id="tel" type="text"/>
+												<input class="form-input input_tel tel" name="tel" id="tel" type="text"/>
 										</div>
 									</p>
-									<button type="submit"  class="signup cadastro4" data-element="#section_4">Avançar</button>
+									<button type="submit" id="btnVoltar_3" class="signup btnvoltar3">Voltar</button>
+									<button type="submit"  class="signup cadastro4" id="cadastrar" data-element="#section_4">Finalizar</button>
 								</div>
 
 							</form>

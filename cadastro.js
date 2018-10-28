@@ -4,31 +4,124 @@
 		$('#section_2').hide();
 		$('#section_3').hide();
 		$('#section_4').hide();
+		$('#btnVoltar_1').hide();
+		$('#btnVoltar_2').hide();
+		$('#btnVoltar_3').hide();
+		$('#btnVoltar_4').hide();
+		$('.input_email').attr('autocomplete','off');
 	});
 
+
+	//botão voltar
 	$(function(){
-		$(".cadastro1").click(function(){
-			$('#section_1').hide();
-			$('#section_2').show();
+		$(".btnvoltar1").click(function(){
+			$('#section_1').show();
+			$('#section_2').hide();
+			$('#btnVoltar_1').hide();
 		});
 	});
 
 	$(function(){
-		$(".cadastro2").click(function(){
-			$('#section_1').hide();
-			$('#section_2').hide();
+		$(".btnvoltar2").click(function(){
+			$('#section_2').show();
+			$('#section_3').hide();
+			$('#btnVoltar_2').hide();
+			$('#btnVoltar_1').show();
+		});
+	});
+
+	$(function(){
+		$(".btnvoltar3").click(function(){
 			$('#section_3').show();
+			$('#section_4').hide();
+			$('#btnVoltar_3').hide();
+			$('#btnVoltar_2').show();
+		});
+	});
+
+
+	//Inputs / Botão avançar
+	
+	
+
+	$(function(){
+		$(".cadastro1").click(function(){
+			if($('.input_nome').val() == ""){
+
+			}else if($('.input_email').val() == ""){
+
+			}else if($('.input_senha').val() == ""){
+
+			}else if($('.input_rsenha').val() == ""){
+
+			}else{
+				$('#section_1').hide();
+				$('#section_2').show();
+				$('#btnVoltar_1').show();
+			}
+			
+		});
+	});
+
+
+
+
+	$(function(){
+		$(".cadastro2").click(function(){
+			if($('.input_rg').val() == ""){
+				$( ".input_rg" ).focus();
+			}else if($('.input_cpf').val() == ""){
+				$( ".input_cpf" ).focus();
+			}else if($('.input_dtNasc').val() == ""){
+				$( ".input_dtNasc" ).focus();
+			}else{
+				$('#section_1').hide();
+				$('#section_2').hide();
+				$('#section_3').show();
+				$('#btnVoltar_1').hide();
+				$('#btnVoltar_2').show();
+			}
 		});
 	});
 
 	$(function(){
 		$(".cadastro3").click(function(){
-			$('#section_1').hide();
-			$('#section_2').hide();
-			$('#section_3').hide();
-			$('#section_4').show();
+			if($('.input_cep').val() == ""){
+				$( ".input_cep" ).focus();
+			}else if($('.input_num').val() == ""){
+				$( ".input_num" ).focus();
+			}else if($('.input_rua').val() == ""){
+
+			}else if($('.input_bairro').val() == ""){
+
+			}else if($('.input_cidade').val() == ""){
+
+			}else if($('.input_uf').val() == ""){
+
+			}else{
+				$('#section_1').hide();
+				$('#section_2').hide();
+				$('#section_3').hide();
+				$('#section_4').show();
+				$('#btnVoltar_1').hide();
+				$('#btnVoltar_2').hide();
+				$('#btnVoltar_3').show();
+			}
 		});
 	});
+
+	$(function(){
+		$(".cadastro4").click(function(){
+			if($('.input_tel').val() == ""){
+				$( ".input_tel" ).focus();
+			}else{
+				$('#teste').hide();
+			}
+		});
+	});
+
+
+
 
 ////////////////////////////////////////////
 //Alerts
