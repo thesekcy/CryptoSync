@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'skin' => 'blue',
+    'skin' => 'black',
 
     /*
     |--------------------------------------------------------------------------
@@ -110,7 +110,7 @@ return [
     'menu' => [
         [
             'text'        => 'Dashboard',
-            'url'         => 'dashboard',
+            'url'         => 'home',
             'icon'        => 'dashboard',
         ],
         [
@@ -120,8 +120,20 @@ return [
         ],
         [
             'text'        => 'Contrato',
-            'url'         => 'contrato',
             'icon'        => 'file',
+            'submenu'     => [
+                [
+                    'text' => 'Criar',
+                    'url'  => 'contrato',
+                    'icon' => 'newspaper-o'
+                ],
+                [
+                    'text' => 'listar',
+                    'url'  => 'contrato/list',
+                    'icon' => 'list-alt'
+                ]
+            ],
+            
         ]
     ],
 

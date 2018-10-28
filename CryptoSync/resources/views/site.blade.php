@@ -8,8 +8,8 @@
 	    <meta name="csrf-token" content="{{ csrf_token() }}">
 
 		<title>CryptoSync - Site Oficial!</title>
-		<meta name="description" content="Plataforma web voltada a segurança utilizando uma tecnologia descentralizada. O Blockchain.">
-		<meta name="keywords" content="Blockchain, Ethereum, Smart Contracts, Contratos inteligentes, Segurança, Facilidade, Plataforma descentralizada.">
+		<meta name="description" content="Plataforma web voltada a segurança utilizando uma tecnologia distribuida. O Blockchain.">
+		<meta name="keywords" content="Blockchain, Ethereum, Smart Contracts, Contratos inteligentes, Segurança, Facilidade, Plataforma distribuida.">
 		<meta name="robots" content="index, follow">
 		<meta name="author" content="CryptoSync">
 		<link rel="icon" href="{{ asset('svg/buffer.svg') }}">
@@ -21,8 +21,8 @@
 		<!-- Bootstrap | CSS
 		================================================== -->
 		<link href="{{ asset('vendor/site/bootstrap/css/bootstrap.css') }}" rel="stylesheet">
-		<link href="{{ asset('vendor/site/bootstrap/css/style.css') }}" rel="stylesheet">
-		<link href="{{ asset('vendor/site/bootstrap/css/particles.css') }}" rel="stylesheet">
+		<link href="{{ asset('vendor/site/Style/dist/css/style.css') }}" rel="stylesheet">
+		<link href="{{ asset('vendor/site/Style/dist/css/particles.css') }}" rel="stylesheet">
 
 	</head>
 	<body>
@@ -44,19 +44,25 @@
 					<div class="collapse navbar-collapse navbarSite">
 						<ul class="navbar-nav">
 							<li class="nav-item ">
-								<a class="nav-link" href="">INICIO</a>
+								<a class="nav-link" href="#inicio">INICIO</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="">COMO FUNCIONA</a>
+								<a class="nav-link" href="#sobre">SOBRE NÓS</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="">CLIENTES</a>
+								<a class="nav-link" href="#fatos">FATOS</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="">PREÇOS</a>
+								<a class="nav-link" href="#features">FEATURES</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="">SUPORTE</a>
+								<a class="nav-link" href="#clientes">CLIENTES</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#precos">PREÇOS</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#contato">CONTATO</a>
 							</li>
 						</ul>
 					</div>
@@ -68,52 +74,56 @@
 							<a class="nav-link btn btn-outline-primary btnLogin" data-toggle="dropdown" id="navDrop" href="">Login <i class="fas fa-caret-down"></i></a>
 
 							<!-- Dropdown formulario de login -->
-							<div class="dropdown-menu">
-								
-								<form class="px-4 py-3" method="POST" action="{{ route('login') }}">
-									@csrf
-									<div class="form-group">
-										<label for="email">{{ __('E-Mail Address') }}</label>
-										<input type="email" class="form-control {{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+						<div class="dropdown-menu">
+							<p id="mensagem"></p>
+							<form class="px-4 py-3" method="POST" action="{{ route('login') }}">
+							@csrf
+							<div class="form-group">
+								<label for="email">{{ __('E-Mail Address') }}</label>
+								<input type="email" class="form-control {{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
 
-										@if ($errors->has('email'))
-										<span class="invalid-feedback" role="alert">
-											<strong>{{ $errors->first('email') }}</strong>
-										</span>
-										@endif
-									</div>
-									<div class="form-group">
-										<label for="password" >{{ __('Password') }}</label>
-										<input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+								@if ($errors->has('email'))
+								<span class="invalid-feedback" role="alert">
+									<strong>{{ $errors->first('email') }}</strong>
+								</span>
+								@endif
+							</div>
+							<div class="form-group">
+								<label for="password" >{{ __('Password') }}</label>
+								<input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
 
-										@if ($errors->has('password'))
-										<span class="invalid-feedback" role="alert">
-											<strong>{{ $errors->first('password') }}</strong>
-										</span>
-										@endif
-									</div>
+								@if ($errors->has('password'))
+								<span class="invalid-feedback" role="alert">
+									<strong>{{ $errors->first('password') }}</strong>
+								</span>
+								@endif
+							</div>
 
-									<div class="form-check"></div>
-									<input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+							<div class="form-check">
+								<input class="custom-control-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+								<label class="custom-control-label" for="remember">
+									{{ __('Manter conectado') }}
+								</label>
+							</div>
+							<br>
 
-									<label class="form-check-label" for="remember">
-										{{ __('Manter conectado') }}
-									</label>
-
-									<button type="submit" class="btn btn-primary">
+							<button type="submit" class="btn btn-outline-primary btnlogin-dropdown">
 										{{ __('Login') }}
-									</button>
+							</button>
 
-								</form>
-								<div class="dropdown-divider"></div>
-								<a class="btn btn-link" href="{{ route('password.request') }}">
+							</form>
+
+
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" id="formLogin" href="#">Ainda não possui uma conta? Cadastre-se</a>
+							<a class="dropdown-item" href="{{ route('password.request') }}">
 									{{ __('Esqueceu sua senha?') }}
-								</a>
+							</a>
 							</div>
 						</li>
 						<!-- Botão de Cadastre-se -->
 						<li class="nav-item">
-							<a class=" btn btn-primary ml-2 btnCadastrar "  data-toggle="dropdown"  href="{{ route('register') }}">Cadastre-se</a>
+							<a class="nav-link btn btn-primary ml-2 btnCadastrar "  data-toggle="dropdown"  href="">Cadastre-se</a>
 						</li>
 					</ul>
 				</nav>
@@ -121,16 +131,16 @@
 				<!-- Em telas menores os itens da lista ficam dentro de um botão -->
 			</div>
 		</div>
-	
+
 		<!--==========================
 		PRIMEIRO - Inicio - Texto Titulo
 		============================-->
-		<section class="section first">
+		<section id="inicio" class="section first">
 			<div id="particles-js">
 				<div class="d-flex justify-content-center">
 					<div class="jumbotron title">
-						<h1>PLATAFORMA DE AUTENTICAÇÃO<br><strong>DESCENTRALIZADA</strong></h1>
-						<a href="#" class="btn"><strong>Eu quero fazer parte da internet descentralizada!</strong></a>
+						<h1>PLATAFORMA DE AUTENTICAÇÃO<br><strong>DISTRIBUIDA</strong></h1>
+						<a href="#" class="btn"><strong>Eu quero fazer parte da internet distribuida!</strong></a>
 					</div>
 				</div>
 			</div>
@@ -139,13 +149,14 @@
 		<!--==========================
 		Sobre nós Section
 		============================-->
-		<section class="sobre">
+		<section id="sobre" class="sobre">
 			<div class="container">
 
 				<div class="section-title text-center">
 					<h2>Sobre Nós</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<p>Saiba um pouco sobre nossa Statup, sua missão, visão e valores.</p>
 				</div>
+				<br><br>
 
 				<div class="row sobre-cols">
 					<div class="col-md-4 wow fadeInUp">
@@ -155,8 +166,8 @@
 								<div class="icon"><i class="fas fa-bolt"></i></div>
 							</div>
 							<h2 class="title"><a href="#">Nossa Missão</a></h2>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							<p class="text-center">
+								Prestar serviços utilizando tecnologias avançadas globalmente, buscando atender às necessidades dos clientes, no brasil e no exterior, com qualidade, confiabilidade, conforto e custos adequados.
 							</p>
 						</div>
 					</div>
@@ -167,8 +178,16 @@
 								<div class="icon"><i class="fas fa-hands-helping"></i></div>
 							</div>
 							<h2 class="title"><a href="#">Nossos Valores</a></h2>
-							<p>
-								Sed ut perspiciatis unde omnis iste natus error sit voluptatem  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+							<p class="text-center">
+								● Desenvolvimento sustentável.<br>
+							  ● Integração.<br>
+								● Resultados.<br>
+								● Pioneirismo em tecnologia.<br>
+								● Inovação constante.<br>
+								● Ética e transparência.<br>
+								● Respeito à vida.<br>
+								● Prezar pelo bem-estar e capacitação dos colaboradores.<br>
+								● Respeitar o meio ambiente.<br>
 							</p>
 						</div>
 					</div>
@@ -179,8 +198,8 @@
 								<div class="icon"><i class="fas fa-eye"></i></div>
 							</div>
 							<h2 class="title"><a href="#">Nossa Visão</a></h2>
-							<p>
-								Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit, sed quia magni dolores eos qui ratione voluptatem sequi nesciunt Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
+							<p class="text-center">
+								Ser a Startup líder em performance e técnologia, reconhecidamente sólida e confiável, destacando-se pelo uso agressivo de tecnologias avançadas e por equipes capacitadas, comprometidas com a qualidade total e a satisfação dos clientes.
 							</p>
 						</div>
 					</div>
@@ -188,24 +207,28 @@
 			</div>
 		</section><!-- #sobre -->
 
-		<!--==========================
-		Call To Action Section
-		============================-->
-		<section id="call-to-action" class="wow fadeIn">
-			<div class="container text-center">
-				<h3>Call To Action</h3>
-				<p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				<a class="cta-btn" href="#">Call To Action</a>
-			</div>
-		</section><!-- #call-to-action -->
+
+<!--==========================
+  Ecologico
+============================-->
+<section class="jumbo-eco">
+  <div class="container text-center">
+    <h3>Ecologicamente Correto</h3>
+    <p>Um dos motivos que podemos nos orgulhar é que a plataforma ajuda a reduzir o uso de papel em grande escala, ajude o meio ambiente e faça parte tambem!.</p>
+    <a class="cta-btn" href="#">Começar</a>
+  </div>
+</section><!-- .Ecologico -->
+
+
+
 		<!--==========================
 		FATOS - Inicio - Texto Titulo - COLOCAR NOME MELHOR E IMAGEM
 		============================-->
-		<section class="section fatos">
+		<section id="fatos" class="section fatos">
 			<div class="container">
 				<div class="section-title text-center">
 					<h2>Fatos</h2>
-					<p>texto bacana pros usuarios ficarem impressionados</p>
+					<p>Acompanhe conosco os dados e o crecimento da plataforma como um todo.</p>
 					<br><br><br><br>
 					<div class="row counters">
 						<div class="col-lg-3 col-6 text-center">
@@ -236,69 +259,62 @@
 		Features Section
 		============================-->
 
-		<section class="features text-center wow fadeInUp">
+		<section id="features" class="features text-center wow fadeInUp">
 			<div class="container">
 				<div class="section-title text-center">
 					<h2>Features Increveis</h2>
-					<p class="separator">Integer cursus bibendum augue ac cursus .</p>
+					<p class="separator">Saiba um pouco o que o espera.</p>
 				</div>
 			</div>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6 col-lg-3">
 						<div class="feature-block">
-							<img src="{!! asset('svg/cloud.svg') !!}" alt="img" class="img-fluid">
-							<h4>creative design</h4>
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+							<img src="{!! asset('svg/rapido.svg') !!}" alt="img" class="img-fluid">
+							<h4>Ágil</h4>
+							<p>Sem demoras, sem filas, sem burocracias, um sistema extremamente ágil.</p>
 						</div>
 					</div>
 					<div class="col-md-6 col-lg-3">
 						<div class="feature-block">
-							<img src="{!! asset('svg/cloud.svg') !!}" alt="img" class="img-fluid">
-							<h4>Retina Ready</h4>
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+							<img src="{!! asset('svg/seguranca.svg') !!}" alt="img" class="img-fluid">
+							<h4>Seguro</h4>
+							<p>Se o cartório pegar fogo, juramos não perder seus dados.</p>
 						</div>
 					</div>
 					<div class="col-md-6 col-lg-3">
 						<div class="feature-block">
-							<img src="{!! asset('svg/cloud.svg') !!}" alt="img" class="img-fluid">
-							<h4>easy to use</h4>
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+							<img src="{!! asset('svg/intuitivo.svg') !!}" alt="img" class="img-fluid">
+							<h4>Intuitivo</h4>
+							<p>Clicou, olhou, sacou, sem complicações!</p>
 						</div>
 					</div>
 					<div class="col-md-6 col-lg-3">
 						<div class="feature-block">
-							<img src="{!! asset('svg/cloud.svg') !!}" alt="img" class="img-fluid">
-							<h4>Free Updates</h4>
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+							<img src="{!! asset('svg/imutavel.svg') !!}" alt="img" class="img-fluid">
+							<h4>Imutavel</h4>
+							<p>Depois de grávado a informação só se perde se o mundo pegar fogo!</p>
 						</div>
 					</div>
-					<div class="col-md-6 col-lg-3">
+					<div class="col-md-6 col-lg-4">
 						<div class="feature-block">
-							<img src="{!! asset('svg/cloud.svg') !!}" alt="img" class="img-fluid">
-							<h4>Free Updates</h4>
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+							<img src="{!! asset('svg/pratico.svg') !!}" alt="img" class="img-fluid">
+							<h4>Cômodo</h4>
+							<p>Filas pra que?<br>Faz da sua casa!<br>	Do seu sofá!</p>
 						</div>
 					</div>
-					<div class="col-md-6 col-lg-3">
+					<div class="col-md-6 col-lg-4">
 						<div class="feature-block">
-							<img src="{!! asset('svg/cloud.svg') !!}" alt="img" class="img-fluid">
-							<h4>App store support</h4>
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+							<img src="{!! asset('svg/suporte.svg') !!}" alt="img" class="img-fluid">
+							<h4>Suporte</h4>
+							<p>Precisou, Chamou, em pouco tempo resolvido seu problema será.</p>
 						</div>
 					</div>
-					<div class="col-md-6 col-lg-3">
+					<div class="col-md-6 col-lg-4">
 						<div class="feature-block">
-							<img src="{!! asset('svg/cloud.svg') !!}" alt="img" class="img-fluid">
-							<h4>Perfect Pixel</h4>
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-						</div>
-					</div>
-					<div class="col-md-6 col-lg-3">
-						<div class="feature-block">
-							<img src="{!! asset('svg/cloud.svg') !!}" alt="img" class="img-fluid">
-							<h4>clean codes</h4>
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+							<img src="{!! asset('svg/distribuido.svg') !!}" alt="img" class="img-fluid">
+							<h4>Distribuido</h4>
+							<p>A internet como a conhecemos está morrendo, para que um centro se todos nós podemos ajudar a mante-la</p>
 						</div>
 					</div>
 
@@ -312,7 +328,7 @@
 		<!--==========================
 		  Clients Section
 		  ============================-->
-		  <section class="clients">
+		  <section id="clientes" class="clients">
 		  	<div class="container">
 		  		<div class="section-title text-center">
 		  			<h2>Nossos Clientes</h2>
@@ -346,7 +362,7 @@
 		<!--==========================
 		ULTIMO - Preços
 		============================-->
-		<section class="pricing py-5">
+		<section id="precos" class="pricing py-5">
 			<div class="container">
 				<div class="section-title text-center">
 					<h2>Preços</h2>
@@ -359,22 +375,22 @@
 						<div class="card mb-5 mb-lg-0">
 							<div class="card-body">
 								<h5 class="card-title text-muted text-uppercase text-center">STANDARD STACK</h5>
-								<h6 class="card-price text-center">R$20<span class="period">/mês</span></h6>
+								<h6 class="card-price text-center">R$ $<span class="period">/mês</span></h6>
 								<div class="price-icon d-flex justify-content-center">
 									<img src="{!! asset('svg/premium.svg') !!}" alt="Stack" class="img-fluid img-responsive" width="50px">
 								</div>
 								<hr>
 								<ul class="fa-ul">
-									<li><span class="fa-li"><i class="fas fa-check"></i></span>5 Contratos</li>
-									<li><span class="fa-li"><i class="fas fa-check"></i></span>5GB Storage</li>
-									<li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Public Projects</li>
-									<li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
-									<li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Unlimited Private Projects</li>
-									<li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Dedicated Phone Support</li>
-									<li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Free Subdomain</li>
-									<li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Monthly Status Reports</li>
+									<li><span class="fa-li"><i class="fas fa-check"></i></span>Vantagens</li>
+									<li><span class="fa-li"><i class="fas fa-check"></i></span>Vantagens</li>
+									<li><span class="fa-li"><i class="fas fa-check"></i></span>Vantagens</li>
+									<li><span class="fa-li"><i class="fas fa-check"></i></span>Vantagens</li>
+									<li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Vantagens</li>
+									<li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Vantagens</li>
+									<li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Vantagens</li>
+									<li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Vantagens</li>
 								</ul>
-								<a href="#" class="btn btn-block btn-primary text-uppercase btnprice">Button</a>
+								<a href="#" class="btn btn-block btn-primary text-uppercase btnprice">ASSINAR	</a>
 							</div>
 						</div>
 					</div>
@@ -383,22 +399,22 @@
 						<div class="card mb-5 mb-lg-0">
 							<div class="card-body">
 								<h5 class="card-title text-muted text-uppercase text-center">PLUS STACK</h5>
-								<h6 class="card-price text-center">R$70<span class="period">/mês</span></h6>
+								<h6 class="card-price text-center">R$ $$<span class="period">/mês</span></h6>
 								<div class="price-icon d-flex justify-content-center">
 									<img src="{!! asset('svg/premiumplus.svg') !!}" alt="Stack" class="img-fluid img-responsive" width="50px">
 								</div>
 								<hr>
 								<ul class="fa-ul">
-									<li><span class="fa-li"><i class="fas fa-check"></i></span><strong>20 Contratos</strong></li>
-									<li><span class="fa-li"><i class="fas fa-check"></i></span>50GB Storage</li>
-									<li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Public Projects</li>
-									<li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
-									<li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Private Projects</li>
-									<li><span class="fa-li"><i class="fas fa-check"></i></span>Dedicated Phone Support</li>
-									<li><span class="fa-li"><i class="fas fa-check"></i></span>Free Subdomain</li>
-									<li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Monthly Status Reports</li>
+									<li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Vantagens</strong></li>
+									<li><span class="fa-li"><i class="fas fa-check"></i></span>Vantagens</li>
+									<li><span class="fa-li"><i class="fas fa-check"></i></span>Vantagens</li>
+									<li><span class="fa-li"><i class="fas fa-check"></i></span>Vantagens</li>
+									<li><span class="fa-li"><i class="fas fa-check"></i></span>Vantagens</li>
+									<li><span class="fa-li"><i class="fas fa-check"></i></span>Vantagens</li>
+									<li><span class="fa-li"><i class="fas fa-check"></i></span>Vantagens</li>
+									<li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Vantagens</li>
 								</ul>
-								<a href="#" class="btn btn-block btn-primary text-uppercase btnprice">Button</a>
+								<a href="#" class="btn btn-block btn-primary text-uppercase btnprice">ASSINAR</a>
 							</div>
 						</div>
 					</div>
@@ -408,22 +424,22 @@
 						<div class="card">
 							<div class="card-body">
 								<h5 class="card-title text-muted text-uppercase text-center">PREMIUM STACK</h5>
-								<h6 class="card-price text-center">R$150 <span class="period">/mês</span></h6>
+								<h6 class="card-price text-center">R$ $$$ <span class="period">/mês</span></h6>
 								<div class="price-icon d-flex justify-content-center">
 									<img src="{!! asset('svg/max2.svg') !!}" alt="Stack" class="img-fluid img-responsive" width="50px">
 								</div>
 								<hr>
 								<ul class="fa-ul">
-									<li><span class="fa-li"><i class="fas fa-check"></i></span><strong>50 Contratos</strong></li>
-									<li><span class="fa-li"><i class="fas fa-check"></i></span>150GB Storage</li>
-									<li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Public Projects</li>
-									<li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
-									<li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Private Projects</li>
-									<li><span class="fa-li"><i class="fas fa-check"></i></span>Dedicated Phone Support</li>
-									<li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Unlimited</strong> Free Subdomains</li>
-									<li><span class="fa-li"><i class="fas fa-check"></i></span>Monthly Status Reports</li>
+									<li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Vantagens</strong></li>
+									<li><span class="fa-li"><i class="fas fa-check"></i></span>Vantagens</li>
+									<li><span class="fa-li"><i class="fas fa-check"></i></span>Vantagens</li>
+									<li><span class="fa-li"><i class="fas fa-check"></i></span>Vantagens</li>
+									<li><span class="fa-li"><i class="fas fa-check"></i></span>Vantagens</li>
+									<li><span class="fa-li"><i class="fas fa-check"></i></span>Vantagens</li>
+									<li><span class="fa-li"><i class="fas fa-check"></i></span>Vantagens</li>
+									<li><span class="fa-li"><i class="fas fa-check"></i></span>Vantagens</li>
 								</ul>
-								<a href="#" class="btn btn-block btn-primary text-uppercase btnprice">Button</a>
+								<a href="#" class="btn btn-block btn-primary text-uppercase btnprice">ASSINAR</a>
 							</div>
 						</div>
 					</div>
@@ -437,6 +453,69 @@
 				</div>
 			</div>
 		</section>
+
+<!--==========================
+  Testemunhos Section
+  ============================-->
+  <section id="contato" class="section-bg testemunhos">
+    <div class="container">
+      <div class="section-title text-center">
+        <h2>testemunhos</h2>
+      </div>
+      <div class="owl-carousel testemunhos-carousel">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="testemunho-item">
+                <img src="{!! asset('img/testemunho-2.jpg') !!}" class="testemunho-img" alt="">
+                <h3>Saul Goodman</h3>
+                <h4>Ceo &amp; Founder</h4>
+                <p>
+                  <img src="{!! asset('img/quote-sign-left.png') !!}" class="quote-sign-left" alt="">
+                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                  <img src="{!! asset('img/quote-sign-right.png') !!}" class="quote-sign-right" alt="">
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="testemunho-item">
+                <img src="{!! asset('img/testemunho-1.jpg') !!}" class="testemunho-img" alt="">
+                <h3>Sara Wilsson</h3>
+                <h4>Designer</h4>
+                <p>
+                  <img src="{!! asset('img/quote-sign-left.png') !!}" class="quote-sign-left" alt="">
+                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                  <img src="{!! asset('img/quote-sign-right.png') !!}" class="quote-sign-right" alt="">
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="testemunho-item">
+                <img src="{!! asset('img/testemunho-3.jpg') !!}" class="testemunho-img" alt="">
+                <h3>Jena Karlis</h3>
+                <h4>Empresária</h4>
+                <p>
+                  <img src="{!! asset('img/quote-sign-left.png') !!}" class="quote-sign-left" alt="">
+                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                  <img src="{!! asset('img/quote-sign-right.png') !!}" class="quote-sign-right" alt="">
+                </p>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Proximo</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- #testemunhos-->
+
+
 
 		<!--==========================
 		ULTIMO - FOOTER - NEWSLATTER - CONTATO
@@ -460,7 +539,7 @@
 										<input type="text" class="form-control" name="name" id="name" placeholder="Seu Nome"/>
 									</div>
 									<div class="form-group col-md-6">
-										<input type="email" class="form-control" name="email" id="email" placeholder="Seu Email"/>
+										<input type="email" class="form-control" name="email" id="email_contato" placeholder="Seu Email"/>
 									</div>
 								</div>
 								<div class="form-group">
@@ -484,7 +563,7 @@
 							<form action="" method="post" role="form"  align="center" class="contactForm">
 								<div class="form-row">
 									<div class="form-group row col-xs-12 col-sm-12 col-md-12 col-lg-12" align="center">
-										<input type="email" class="form-control text-center form-newslatter" name="email" id="email" placeholder="Seu Email"/>
+										<input type="email" class="form-control text-center form-newslatter" name="email" id="email_newslatter" placeholder="Seu Email"/>
 									</div>
 								</div>
 								<div class="text-center"><button type="submit">Assinar</button></div>
@@ -542,22 +621,23 @@
 					</div>
 				</div>
 			</div>
-		</footer><!-- .footer
+		</footer><!-- .footer-->
 
 		<!-- Arquivos JS
 		================================================== -->
 
-		 <script rel="stylesheet" src="{{ asset('vendor/site/popper/dist/popper.min.js') }}" defer></script>
-		 <script rel="stylesheet" src="{{ asset('vendor/site/style/dist/js/particles.js/particles.js') }}" defer></script>
-		 <script rel="stylesheet" src="{{ asset('vendor/site/style/dist/js/particles.js/app.js') }}" defer></script>
-		 <script rel="stylesheet" src="{{ asset('vendor/adminlte/vendor/jquery/dist/jquery.min.js') }}"></script>
-		 <script rel="stylesheet" src="{{ asset('vendor/site/bootstrap/js/bootstrap.min.js') }}"></script>
+		 <script rel="text/javascript" src="{{ asset('vendor/site/popper/dist/popper.min.js') }}" defer></script>
+		 <script rel="text/javascript" src="{{ asset('vendor/site/Style/dist/js/particles.js/particles.js') }}" defer></script>
+		 <script rel="text/javascript" src="{{ asset('vendor/site/Style/dist/js/particles.js/app.js') }}" defer></script>
+		 <script rel="text/javascript" src="{{ asset('vendor/adminlte/vendor/jquery/dist/jquery.min.js') }}"></script>
+		 <script rel="text/javascript" src="{{ asset('vendor/site/bootstrap/js/bootstrap.min.js') }}"></script>
+		  <script rel="text/javascript" src="{{ asset('vendor/site/Style/dist/js/AnimacaoNav.js') }}" defer></script>
 
 		<!--- JS usado no particles.js -->
-		<script rel="stylesheet" defer> 
-			onkeyup=""
-		 	particlesJS.load('particles-js', "{{ asset('vendor/site/Style/dist/js/particles.js/particles.json') }}", function() {});
+		<script type="text/javascript" defer="defer">
+			$( document ).ready(function() {
+				particlesJS.load('particles-js', "{{ asset('vendor/site/Style/dist/js/particles.js/particles.json') }}", function() {});
+			});
 		</script>
-
 	</body>
 </html>

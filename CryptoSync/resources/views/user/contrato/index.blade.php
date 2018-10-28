@@ -10,156 +10,195 @@
 @section('title', 'Cadastro Dados do Perfil')
 
 @section('content_header')
-	<h1>Perfil<small>Preview</small></h1>
+	<h1>Personalização de Contrato<small>Preview</small></h1>
     <ol class="breadcrumb">
-    	<li>
-    		<a href="#" ><i class="fa fa-user"></i>Perfil</a>
-    	</li>
+		<li><a href="#"><i class="fa fa-file-text-o"></i> Contrato</a></li>
+		<li><a href="#">Forms</a></li>
     </ol>
 @stop
 
 @section('content')
 
-<div class="box box-default">
-	<!-- /.box-header -->
-	<div class="box-body">
-		@if(isset($errors) && count($errors) > 0 )
-		<div class="alert alert-danger">
-			<ul class="margin-bottom-none padding-left-lg">
-				<li>Todos os campos com * são Obrigatorios.</li>
-			</ul>
-		</div>
-		</div>
-		@endif
-		<div id="smartwizard2">
-			<ul>
-				<li><a href="#step-1">1º<br /><small>CONTRATANTE</small></a></li>
-				<li><a href="#step-2">2º<br /><small>CONTRATADO</small></a></li>
-			</ul>
-			<div>
-				<div id="step-1" class="">
-					<div class="col-md-8">
-						<div class="form-group">
-							<label>* Nome Completo:</label>
-							<input type="text"  class="form-control" value="{{ auth()->guard('web')->user()->name}}" disabled>
-						</div><!-- /.form-group -->
-					</div>
+<div class="row">
+	<div class="col-md-12">
+		<div class="callout callout-info">
+			<h4>I am an info callout!</h4>
 
-					<div class="col-md-4">
-						<div class="form-group">
-							<label>* Estado Civil</label>
-							<input type="text"  value="{{$perfils->estCivil}}" class="form-control" placeholder="" disabled>
-						</div><!-- /.form-group -->
-					</div>
-					<div class="col-md-4">
-						<div class="form-group">
-							<label>* Profissão</label>
-							<input type="text"  value="{{$perfils->proficao}}" class="form-control" placeholder="" disabled>
-						</div><!-- /.form-group -->
-					</div>
-					<div class="col-md-2">
-						<div class="form-group">
-							<label>* CPF / CNPJ</label>
-							<input type="text"  value="{{$perfils->cpf_cnpj}}" class="form-control" placeholder="" disabled>
-						</div><!-- /.form-group -->
-					</div>
-					<div class="col-md-2">
-						<div class="form-group">
-							<label>* RG / IE</label>
-							<input type="text"  value="{{$perfils->rg_ie}}" class="form-control" placeholder="" disabled>
-						</div><!-- /.form-group -->
-					</div>
-					<div class="col-md-4">
-						<div class="form-group">
-							<label>* Nacionalidade</label>
-							<input type="text"  value="{{$perfils->nascionalidade}}"  class="form-control" placeholder="" disabled>
-						</div><!-- /.form-group -->
-					</div>
-					<div class="col-md-8">
-						<div class="form-group">
-							<label>* Endereço:</label>
-							<input type="text"  value="{{$perfils->end}}" class="form-control" placeholder="" disabled>
-						</div><!-- /.form-group -->
-					</div>
-					<div class="col-md-4">
-						<div class="form-group">
-							<label>* Bairro</label>
-							<input type="text"  value="{{$perfils->bairro}}" class="form-control" placeholder="" disabled>
-						</div><!-- /.form-group -->
-					</div>
-					<div class="col-md-4">
-						<div class="form-group">
-							<label>* CEP</label>
-							<input type="text"  value="{{$perfils->cep}}" class="form-control" placeholder="" disabled>
-						</div><!-- /.form-group -->
-					</div>
-					<div class="col-md-4">
-						<div class="form-group">
-							<label>* Cidade</label>
-							<input type="text"  value="{{$perfils->cidade}}" class="form-control" placeholder="" disabled>
-						</div><!-- /.form-group -->
-					</div>
-					<div class="col-md-4">
-						<div class="form-group">
-							<label>* Estado</label>
-							<input type="text"  value="{{$perfils->estado}}"  class="form-control" placeholder="" disabled>
-						</div><!-- /.form-group -->
-					</div>
-				</div><!-- /.step-1 -->
-				<div id="step-2" class="">
-					<form action="/contrato/create" method="post" accept-charset="utf-8">
-						@csrf
-						<input type="hidden" name="id_contratante" value="{{$perfils->id}}"  class="form-control">
-						<div class="col-md-6">
-							<div class="form-group {{ $errors->has('id_contratado') ? 'has-error' : '' }}" >
-								<label>* CPF do Contratanto:</label>
-								<select class="form-control selectpicker" name="id_contratado" id="cpf_cnpj_Contratante" data-live-search="true" value="{{old('id_contratado')}}">
-									<option value="">Selecione o Contratante</option>
-									@foreach($query as $valor)
-									<option value="{{$valor->id}}">{{$valor->cpf_cnpj}} - {{$valor->nmCompleto}}</option>
-									@endforeach
-								</select>
-							</div>
-						</div>
-						<div class="col-md-3">
-							<div class="form-group {{ $errors->has('valor') ? 'has-error' : '' }}" >
-								<label>* Valor $:</label>
-								<input type="text" name="valor" id="valor" class="form-control" value="{{old('valor')}}" >
-							</div><!-- /.form-group -->
-						</div>
-						<div class="col-md-3">
-							<div class="form-group {{ $errors->has('prazo') ? 'has-error' : '' }}">
-								<label>* Prazo de termino:</label>
-								<input type="text" name="prazo" id="prazo" class="form-control" value="{{old('prazo')}}" >
-							</div><!-- /.form-group -->
-						</div>
-						<div class="col-md-6">
-							<div class="form-group {{ $errors->has('servico') ? 'has-error' : '' }}">
-								<label>* Serviço Prestado:</label>
-								<input type="text" name="servico" id="servico" class="form-control" value="{{old('servico')}}">
-							</div><!-- /.form-group -->
-						</div>
-						<div class="col-md-6">
-							<div class="form-group {{ $errors->has('contrato') ? 'has-error' : '' }}">
-								<label>* Contrato:</label>
-								<select class="form-control selectpicker" id="contrato" name="contrato" data-live-search="true" value="{{old('contrato')}}">
-									<option value="">Selecione o Contratante</option>
-									<option value="Prestação de Serviço">Prestação de Serviço</option>
-								</select>
-							</div>
-						</div>
-						<div class="col-md-12">
-							<div class="form-group">
-								<button type="submit" class="btn btn-info pull-right">Salvar</button>
-							</div>
-						</div>
-					</form>
-				</div>
-			</div>
+			<p>Este modelo de contrato é aplicado, de forma igualitária. Seu formato já é adaptado para ser o mais enxuto possível para os nossos clientes, provendo-lhes a devida segurança e considerando os requisitos mínimos para a viabilidade do modelo comercial. Neste âmbito, não há possibilidade de serem realizadas alterações ou adendos.</p>
 		</div>
+		<div class="box box-success">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="box-header with-border">
+						<h3 class="box-title">Detalamento do Contrato</h3>
+					</div><!-- / box-header with-border -->
+					<div class="box-body">
+						<form action="/contrato/create" method="post" accept-charset="utf-8">
+							@csrf
+							<input type="hidden" name="id_contratante" value="{{$perfils->id}}"  class="form-control">
+							<div class="col-md-12">
+								<div class="form-group {{ $errors->has('id_contratado') ? 'has-error' : '' }}" >
+									<label>* CPF do Contratanto:</label>
+									<select class="form-control selectpicker" name="id_contratado" id="cpf_cnpj_Contratante" data-live-search="true" value="{{old('id_contratado')}}">
+										<option value="">Selecione o Contratante</option>
+										@foreach($query as $valor)
+										<option value="{{$valor->id}}">{{$valor->cpf_cnpj}} - {{$valor->nmCompleto}}</option>
+										@endforeach
+									</select>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group {{ $errors->has('valor') ? 'has-error' : '' }}" >
+									<label>* Valor $:</label>
+									<input type="text" name="valor" id="valor" class="form-control" value="{{old('valor')}}" >
+								</div><!-- /.form-group -->
+							</div>
+							<div class="col-md-6">
+								<div class="form-group {{ $errors->has('prazo') ? 'has-error' : '' }}">
+									<label>* Prazo de termino:</label>
+									<input type="text" name="prazo" id="prazo" class="form-control" value="{{old('prazo')}}" >
+								</div><!-- /.form-group -->
+							</div>
+							<div class="col-md-6">
+								<div class="form-group {{ $errors->has('servico') ? 'has-error' : '' }}">
+									<label>* Serviço Prestado:</label>
+									<input type="text" name="servico" id="servico" class="form-control" value="{{old('servico')}}">
+								</div><!-- /.form-group -->
+							</div>
+							<div class="col-md-6">
+								<div class="form-group {{ $errors->has('contrato') ? 'has-error' : '' }}">
+									<label>* Contrato:</label>
+									<select class="form-control selectpicker" id="contrato" name="contrato" data-live-search="true" value="{{old('contrato')}}">
+										<option value="">Selecione o Contratante</option>
+										<option value="Prestação de Serviço">Prestação de Serviço</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="form-group">
+									<button type="reset" class="btn btn-warning">
+										<span>
+											<i class=" fa fa-times"> Limpa Form</i>
+										</span>
+									</button>
+									<button type="button" class="btn btn-info pull-right" data-toggle="modal" data-target="#modal-default">
+										<span>
+											<i class="fa fa-list-alt"> Gerar contrato </i>
+										</span>
+									</button>
+								</div>
+							</div>
+							<div class="modal fade" id="modal-default">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">×</span></button>
+										</div>
+										<div class="modal-body">
+											<p>ATENÇÃO: de acordo com o item b da cláusula, este Contrato de Prestação de Serviços possui prazo de vigência e prevê multa de 30% do valor restante do Contrato em caso de rescisão antecipada requerida pelo Contratante.</p>
+											
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+											<button type="submit" class="btn btn-primary">Enviar solicitação</button>
+										</div>
+									</div><!-- /.modal-content -->
+								</div><!-- /.modal-dialog -->
+							</div>
+						</form>
+					</div><!-- / box-body -->
+					<div class="box-footer">
+					</div><!-- / box-footer -->
+				</div><!-- / col-md-8 -->
+				<div class="col-md-6">
+					<div class="box-header with-border">
+						<h3 class="box-title">Dados do Contratante</h3>
+					</div><!-- / box-header with-border -->
+					<div class="box-body">
+						<div class="user-block">
+							<img class="img-circle img-bordered-sm" src="{!! asset('img/user.png') !!}" alt="user image">
+							<span class="username">
+								<a href="#">{{ auth()->guard('web')->user()->name}}.</a>
+							</span>
+							<span class="description" style="border-bottom: 1px solid #3091be;">
+								<strong><i class="fa fa-key margin-r-5"></i> 0x987907687685765876</strong>
+							</span>
 
-	</div>
-</div>
+							<div class="row" style="padding-top: 15px">
+
+								<div class="col-md-4">
+									<div class="form-group margin-bottom-none">
+										<label>* Estado Civil</label>
+										<input type="text"  value="{{$perfils->estCivil}}" class="form-control input-sm" placeholder="" disabled>
+									</div><!-- /.form-group -->
+								</div>
+								<div class="col-md-8">
+									<div class="form-group margin-bottom-none">
+										<label>* Profissão</label>
+										<input type="text"  value="{{$perfils->proficao}}" class="form-control input-sm" placeholder="" disabled>
+									</div><!-- /.form-group -->
+								</div>
+								<div class="col-md-4">
+									<div class="form-group margin-bottom-none">
+										<label>* CPF / CNPJ</label>
+										<input type="text"  value="{{$perfils->cpf_cnpj}}" class="form-control input-sm" placeholder="" disabled>
+									</div><!-- /.form-group -->
+								</div>
+								<div class="col-md-4">
+									<div class="form-group margin-bottom-none">
+										<label>* RG / IE</label>
+										<input type="text"  value="{{$perfils->rg_ie}}" class="form-control input-sm" placeholder="" disabled>
+									</div><!-- /.form-group -->
+								</div>
+								<div class="col-md-4">
+									<div class="form-group margin-bottom-none">
+										<label>* Nacionalidade</label>
+										<input type="text"  value="{{$perfils->nascionalidade}}"  class="form-control input-sm" placeholder="" disabled>
+									</div><!-- /.form-group -->
+								</div>
+								<div class="col-md-8">
+									<div class="form-group margin-bottom-none">
+										<label>* Endereço:</label>
+										<input type="text"  value="{{$perfils->end}}" class="form-control input-sm" placeholder="" disabled>
+									</div><!-- /.form-group -->
+								</div>
+								<div class="col-md-4">
+									<div class="form-group margin-bottom-none">
+										<label>* Bairro</label>
+										<input type="text"  value="{{$perfils->bairro}}" class="form-control input-sm" placeholder="" disabled>
+									</div><!-- /.form-group -->
+								</div>
+								<div class="col-md-4">
+									<div class="form-group margin-bottom-none">
+										<label>* CEP</label>
+										<input type="text"  value="{{$perfils->cep}}" class="form-control input-sm" placeholder="" disabled>
+									</div><!-- /.form-group -->
+								</div>
+								<div class="col-md-4">
+									<div class="form-group margin-bottom-none">
+										<label>* Cidade</label>
+										<input type="text"  value="{{$perfils->cidade}}" class="form-control input-sm" placeholder="" disabled>
+									</div><!-- /.form-group -->
+								</div>
+								<div class="col-md-4">
+									<div class="form-group margin-bottom-none">
+										<label>* Estado</label>
+										<input type="text"  value="{{$perfils->estado}}"  class="form-control input-sm" placeholder="" disabled>
+									</div><!-- /.form-group -->
+								</div>
+
+							</div><!-- / row -->
+						</div><!-- / user-block -->
+					</div><!-- / box-body -->
+
+					<div class="box-footer">
+					</div><!-- / box-footer -->
+				</div><!-- / col-md-6 -->
+			</div><!-- / row -->
+		</div><!-- / box box-success -->
+	</div><!-- / col-md-8 -->
+</div><!-- / row -->
 
 @stop
 

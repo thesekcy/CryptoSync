@@ -90,13 +90,22 @@
 
             <!-- sidebar: style can be found in sidebar.less -->
             <section class="sidebar">
-
-                <!-- Sidebar Menu -->
-                <ul class="sidebar-menu" data-widget="tree">
-                    @each('adminlte::partials.menu-item', $adminlte->menu(), 'item')
-                </ul>
-                <!-- /.sidebar-menu -->
-            </section>
+                <div class="user-panel">
+                    <div class="pull-left image">
+                      <img src="{!! asset('img/user.png') !!}" class="img-circle" alt="User Image">
+                  </div>
+                  <div class="pull-left info">
+                      <p>{{ auth()->guard('web')->user()->name}}</p>
+                      <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                  </div>
+              </div>
+              <!-- Sidebar Menu -->
+              <ul class="sidebar-menu" data-widget="tree">
+                <li class="header"></li>
+                @each('adminlte::partials.menu-item', $adminlte->menu(), 'item')
+            </ul>
+            <!-- /.sidebar-menu -->
+        </section>
             <!-- /.sidebar -->
         </aside>
         @endif
