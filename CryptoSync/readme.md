@@ -9,4 +9,4 @@ Isso resolverá todas as dependências do projeto e gravará as versões exatas 
 
 No diretorio do Projeto renomeie o arquivo .env.examplo pra .env
 
-- ren .env.example .env
+- ren .env.examplo .env
