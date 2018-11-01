@@ -3,10 +3,15 @@
 
 ## Para correção dos erro do projeto
 
+Isso instalará o composer no diretório atual para que você possa usar
+<pre class="prettyprint">
+	<code class="lang-bsh"> php -r "readfile('https://getcomposer.org/installer');" | php</code>
+</pre>
 Isso resolverá todas as dependências do projeto e gravará as versões exatas no composer.lock
-
-- php composer.phar update
-
+<pre class="prettyprint">
+	<code class="lang-bsh">php composer.phar update</code>
+</pre>
 No diretorio do Projeto renomeie o arquivo .env.examplo pra .env
-
-- ren .env.examplo .env
+<pre class="prettyprint">
+	<code class="lang-bsh"> ren .env.examplo .env</code>
+</pre>
