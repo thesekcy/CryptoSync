@@ -7,6 +7,6 @@ Isso resolverá todas as dependências do projeto e gravará as versões exatas 
 
 - php composer.phar update
 
-No diretorio do Projeto renomeie o arquivo .env.example pra .env
+No diretorio do Projeto renomeie o arquivo .env.examplo pra .env
 
 - ren .env.example .env
