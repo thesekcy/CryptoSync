@@ -25,6 +25,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+	Route::get('/cadastro', 'user\CadastroController@index')->name('cadastro');;
+
 	Route::get('/perfil','User\PerfilController@index')->name('perfil');
 	Route::post('/perfil/create','User\PerfilController@store')->name('cadPerfil');
 

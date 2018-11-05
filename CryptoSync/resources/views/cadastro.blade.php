@@ -55,13 +55,13 @@
 						<div class="wrapper-2">
 							<div class="form-title">Crie sua conta</div>
 							<div class="form">
-								<form class="form">
-	
+								<form class="form" action="/home" method="post" accept-charset="utf-8">
+
 									<div id="section_1">
 										<p class="content-item">
-											<div class="form-group">
+											<div class="form-group {{ $errors->has('nmCompleto') ? 'has-error' : '' }}">
 												<label class="form-label">Nome completo</label>
-												<input type="text" class="input_nome" required>
+												<input type="text" name="nmCompleto" value="{{isset($perfils->nmCompleto)}}" class="input_nome" required>
 											</div>
 										</p>
 										<p class="content-item">
@@ -84,30 +84,30 @@
 										</p>
 										<button type="submit"  class="signup cadastro1" data-element="#section_1">Avançar</button>
 									</div>
-	
+
 									<div id="section_2">
 										<p class="content-item">
-											<div class="form-group">
+											<div class="form-group {{ $errors->has('rg_ie') ? 'has-error' : '' }}">
 												<label class="form-label" id="r">RG</label>
-												<input type="text" id="ierg" class="input_rg" required>
+												<input type="text" name="rg_ie" id="ierg" value="{{ isset($perfils->rg_ie) ? $perfils->rg_ie :  old('rg_ie')}}" class="input_rg" required>
 											</div>
 										</p>
 										<p class="content-item">
-											<div class="form-group">
+											<div class="form-group {{ $errors->has('cpf_cnpj') ? 'has-error' : '' }}">
 												<label class="form-label" id="c">CPF</label>
-												<input type="text" id="cpfcnpj" class="input_cpf" required>
+												<input type="text" name="cpf_cnpj" id="cpfcnpj" value="{{isset($perfils->cpf_cnpj) ? $perfils->cpf_cnpj: old('cpf_cnpj')}}" class="input_cpf" required>
 											</div>
 										</p>
 										<p class="content-item">
-											<div class="form-group">
+											<div class="form-group {{ $errors->has('dtNasc') ? 'has-error' : '' }}">
 												<label class="form-label">Data de Nascimento</label>
-												<input id="data" class="form-input input_dtNasc" type="text" />
+												<input name="dtNasc" id="dtNasc" class="form-input input_dtNasc" value="{{old('dtNasc')}}" type="text" />
 											</div>
 										</p>
 										<p class="content-item">
-											<div class="form-group">
+											<div class="form-group {{ $errors->has('sexo') ? 'has-error' : '' }}">
 												<label class="form-label cbSemAnimacao">Sexo</label>
-												<select name="potencial"  class="custom-select sources">
+												<select name="sexo"  class="custom-select sources">
 											  <option value="M" selected>Masculino</option>
 											  <option value="F">Feminino</option>
 											</select>
@@ -116,14 +116,14 @@
 										<button type="submit" id="btnVoltar_1" class="signup btnvoltar1">Voltar</button>
 										<button type="submit"  class="signup cadastro2" data-element="#section_2">Avançar</button>
 									</div>
-	
+
 									<div id="section_3">
 										<p class="content-item">
 											<div class="row">
 											  <div class="col-4">
-												<div class="form-group">
+												<div class="form-group {{ $errors->has('cep') ? 'has-error' : '' }}">
 												  <label class="form-label" for="first">CEP</label>
-												  <input class="form-input input_cep" id="cep" type="text" />
+												  <input class="form-input input_cep" name="cep" id="cep" value="{{old('cep')}}" type="text" />
 												</div>
 											  </div>
 											  <div class="col-4">
@@ -140,41 +140,41 @@
 											  </div>
 											</div>
 										</p>
-	
+
 										<p class="content-item">
 											<div class="row">
 											  <div class="col-12">
-												<div class="form-group">
+												<div class="form-group {{ $errors->has('end') ? 'has-error' : '' }}">
 												  <label class="form-label cbSemAnimacao" for="last">Rua</label>
-												  <input class="form-input disabledbutton input_rua" id="rua" type="text" readonly="readonly"/>
+												  <input class="form-input disabledbutton input_rua" name="end" id="rua" type="text" value="{{ old('end')}}" readonly="readonly"/>
 												</div>
 											  </div>
 											</div>
 										</p>
-	
+
 										<p class="content-item">
 											<div class="row">
 											  <div class="col-12">
-												<div class="form-group">
+												<div class="form-group {{ $errors->has('bairro') ? 'has-error' : '' }}">
 												  <label class="form-label cbSemAnimacao" for="first">Bairro</label>
-												  <input class="form-input disabledbutton input_bairro" id="bairro" type="text" readonly="readonly"/>
+												  <input class="form-input disabledbutton input_bairro" id="bairro" name="bairro" type="text" value="{{old('bairro')}}" readonly="readonly"/>
 												</div>
 											  </div>
 											</div>
 										</p>
-	
+
 										<p class="content-item">
 											<div class="row">
-											  <div class="col-8">
-												<div class="form-group">
+											  <div class="col-7">
+												<div class="form-group {{ $errors->has('cidade') ? 'has-error' : '' }}">
 												  <label class="form-label cbSemAnimacao" for="first">Cidade</label>
-												  <input class="form-input disabledbutton input_cidade" id="cidade" type="text" readonly="readonly"/>
+												  <input class="form-input disabledbutton input_cidade" id="cidade" name="cidade" type="text" readonly="readonly"/>
 												</div>
 											  </div>
-											  <div class="col-4">
-												<div class="form-group">
-												  <label class="form-label cbSemAnimacao" for="last">UF</label>
-												  <input class="form-input disabledbutton input_uf" id="uf" type="text" readonly="readonly"/>
+											  <div class="col-5">
+												<div class="form-group {{ $errors->has('estado') ? 'has-error' : '' }}">
+												  <label class="form-label cbSemAnimacao" for="last">Estado</label>
+												  <input class="form-input disabledbutton input_uf" id="estado" name="estado" data-live-search="true" type="text" readonly="readonly"/>
 												</div>
 											  </div>
 											</div>
@@ -182,21 +182,21 @@
 										<button type="submit" id="btnVoltar_2" class="signup btnvoltar2">Voltar</button>
 										<button type="submit"  class="signup cadastro3" data-element="#section_3">Avançar</button>
 									</div>
-	
+
 									<div id="section_4">
 										<p class="content-item">
-											<div class="form-group">
+											<div class="form-group {{ $errors->has('profissao') ? 'has-error' : '' }}">
 												<label class="form-label cbSemAnimacao">Profissão</label>
-												<select name="potencial"  class="custom-select sources">
+												<select name="profissao"  class="custom-select sources">
 													<option value="1" selected>Programador</option>
 													<option value="2">Garoto de Programa</option>
 												</select>
 											</div>
 										</p>
 										<p class="content-item">
-											<div class="form-group">
+											<div class="form-group {{ $errors->has('estCivil') ? 'has-error' : '' }}">
 												<label class="form-label cbSemAnimacao">Estado Civil</label>
-												<select name="potencial"  class="custom-select sources">
+												<select name="estCivil"  class="custom-select sources">
 													<option value="1" selected>Solteiro(a)</option>
 													<option value="2">Casado(a)</option>
 													<option value="2">Divorciado(a)</option>
@@ -205,9 +205,9 @@
 											</div>
 										</p>
 										<p class="content-item">
-											<div class="form-group">
-												<label class="form-label cbSemAnimacao	">Nacionalidade</label>
-												<select name="potencial"  class="custom-select sources">
+											<div class="form-group {{ $errors->has('nascionalidade') ? 'has-error' : '' }}">
+												<label class="form-label cbSemAnimacao">Nacionalidade</label>
+												<select name="nascionalidade" value="{{old('nascionalidade')}}" class="custom-select sources">
 													<option value="1" selected>Brasileira</option>
 													<option value="2">Americana</option>
 													<option value="2">Argentina</option>
@@ -216,7 +216,7 @@
 											</div>
 										</p>
 										<p class="content-item">
-											<div class="form-group">
+											<div class="form-group {{ $errors->has('tel') ? 'has-error' : '' }}">
 												<label class="form-label">Telefone</label>
 													<input class="form-input input_tel tel" name="tel" id="tel" type="text"/>
 											</div>
@@ -224,7 +224,7 @@
 										<button type="submit" id="btnVoltar_3" class="signup btnvoltar3">Voltar</button>
 										<button type="submit"  class="signup cadastro4" id="cadastrar" data-element="#section_4">Finalizar</button>
 									</div>
-	
+
 								</form>
 							</div>
 						</div>
@@ -232,17 +232,18 @@
 				</div>
 			</div>
 		</div>
-	
+
 
 		<!-- Arquivos JS
 		================================================== -->
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-		<script rel="text/javascript" src="{{ asset('vendor/site/bootstrap/js/jquery.inputmask.bundle.js"></script>
-		<script rel="text/javascript" src="{{ asset('vendor/site/bootstrap/js/viacep.js"></script>
-		<script rel="text/javascript" src="{{ asset('vendor/site/bootstrap/js/cadastro.js"></script>
-		<script rel="text/javascript" src="{{ asset('vendor/site/bootstrap/js/toast.min.js"></script>
+
+		<script rel="text/javascript" src="{{ asset('vendor/adminlte/vendor/jquery/dist/jquery.min.js') }}" defer></script>
+		<script rel="text/javascript" src="{{ asset('vendor/adminlte/vendor/inputmask/js/jquery.inputmask.bundle.js') }}" defer></script>
+		<script rel="text/javascript" src="{{ asset('vendor/site/Style/dist/js/viacep.js') }}" defer></script>
+		<script rel="text/javascript" src="{{ asset('vendor/site/Style/dist/js/cadastro.js') }}" defer></script>
+		<script rel="text/javascript" src="{{ asset('vendor/site/Style/dist/js/jquery.toast.min.js') }}" defer></script>
 		<script rel="text/javascript" src="{{ asset('vendor/site/popper/dist/popper.min.js') }}" defer></script>
-		<script rel="text/javascript" src="{{ asset('vendor/adminlte/vendor/jquery/dist/jquery.min.js') }}"></script>
-		<script rel="text/javascript" src="{{ asset('vendor/site/bootstrap/js/bootstrap.min.js') }}"></script>
+		<script rel="text/javascript" src="{{ asset('vendor/site/bootstrap/js/bootstrap.min.js') }}" defer></script>
 	</body>
 </html>

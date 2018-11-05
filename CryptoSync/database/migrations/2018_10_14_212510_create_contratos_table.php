@@ -15,11 +15,11 @@ class CreateContratosTable extends Migration
     {
         Schema::create('contratos', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_contratante ');
+            $table->integer('id_contratante');
             $table->integer('id_contratado');
             $table->integer('valor');
             $table->char('prazo', 15);
-            $table->string('servico'200);
+            $table->string('servico',200);
             $table->string('contrato', 200);
 
             $table->timestamps();
