@@ -48,10 +48,28 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+        //dd($data);
         return Validator::make($data, [
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6|confirmed',
+            'password' => 'required|string|min:8|confirmed',
+            //'rpassword' => 'required|string|min:8|confirmed',
+            'ierg' => 'required|string|max:15',
+            'cpfcnpj' => 'required|string|max:18',
+            'dtnasc' => 'required|string|max:10',
+            'sexo' => 'required|string|max:1',
+            'cep' => 'required|string|max:9',
+            'endnum' => 'required|string|max:5',
+            //'complemento' => 'string|max:255',
+            'rua' => 'required|string|max:255',
+            'bairro' => 'required|string|max:255',
+            'cidade' => 'required|string|max:255',
+            'uf' => 'required|string|max:2',
+            'profissao' => 'required|string|max:1',
+            'estadocivil' => 'required|string|max:1',
+            'nacionalidade' => 'required|string|max:1',
+            'telefone' => 'required|string|max:14',
+            
         ]);
     }
 
@@ -63,10 +81,26 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        //dd($data);
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'ierg' => $data['ierg'],
+            'cpfcnpj' => $data['cpfcnpj'],
+            'dtnasc' => $data['dtnasc'],
+            'sexo' => $data['sexo'],
+            'cep' => $data['cep'],
+            'endnum' => $data['endnum'],
+            'complemento' => $data['complemento'],
+            'rua' => $data['rua'],
+            'bairro' => $data['bairro'],
+            'cidade' => $data['cidade'],
+            'uf' => $data['uf'],
+            'profissao' => $data['profissao'],
+            'estadocivil' => $data['estadocivil'],
+            'nacionalidade' => $data['nacionalidade'],
+            'telefone' => $data['telefone'],
         ]);
     }
 }

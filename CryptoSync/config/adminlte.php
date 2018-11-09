@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'skin' => 'black',
+    'skin' => 'purple',
 
     /*
     |--------------------------------------------------------------------------
@@ -119,6 +119,11 @@ return [
             'icon'        => 'user',
         ],
         [
+            'text'        => 'search',
+            'url'         => 'search',
+            'icon'        => 'search',
+        ],
+        [
             'text'        => 'Contrato',
             'icon'        => 'file',
             'submenu'     => [
@@ -134,6 +139,11 @@ return [
                 ]
             ],
             
+        ],
+        [
+            'text'        => 'Historico',
+            'url'         => 'historico',
+            'icon'        => 'history',
         ]
     ],
 

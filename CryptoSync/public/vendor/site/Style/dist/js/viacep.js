@@ -1,21 +1,21 @@
-$(document).ready(function() {
-    $('#cep').blur(function() {
+$(document).ready(function(){
+    $('#cep').blur(function(){
         var cep = $('#cep').val() || '';
-        if (!cep) {
+        if(!cep){
             return
         }
         var url = 'https://viacep.com.br/ws/' + cep + '/json';
-        $.getJSON(url, function(data) {
-            if ("error" in data) {
+        $.getJSON(url, function(data){
+            if("error" in data){
                 return
             }
 
             $('#rua').val(data.logradouro);
             $('#bairro').val(data.bairro);
             $('#cidade').val(data.localidade);
-            $('#estado').val(data.uf);
+            $('#uf').val(data.uf);
 
-
+            
         });
     });
 });

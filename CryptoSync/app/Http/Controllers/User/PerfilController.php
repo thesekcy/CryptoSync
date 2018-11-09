@@ -4,24 +4,27 @@ namespace App\Http\Controllers\User;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Model\Perfil\Perfil;
+use App\User;
 use App\Http\Requests\Perfil\PerfilFormRequest;
 
 class PerfilController extends Controller
 {
-	private $perfil;
+	private $user;
 
-	public function __construct(Perfil $perfil)
+	public function __construct(User $user)
 	{
-		$this->perfil = $perfil;
+		$this->user = $user;
 	}
 
     public function index()
     {
-    	$perfils = $this->perfil->where('id_users',auth()->guard('web')->user()->id )->first();
-    	
-    	return view('user.perfil.index',compact('perfils'));
-    }
+    	$perfils = $this->user->where('id',auth()->guard('web')->user()->id )->first();
+		
+		return view('user.perfil.index',compact('perfils'));
+
+	}
+	
+	
 
     public function store(PerfilFormRequest $request)
     {
